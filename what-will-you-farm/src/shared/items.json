@@ -1,0 +1,193 @@
+{
+  "armor": [
+    {
+      "name": "bone_helmet",
+      "requirements": {
+        "level": 3,
+        "coins": 250
+      },
+      "ingredients": [
+        {
+          "name": "tattered_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "tattered_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_bone",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "name": "bone_chestplate",
+      "requirements": {
+        "level": 3,
+        "coins": 250
+      },
+      "ingredients": [
+        {
+          "name": "tattered_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "tattered_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_bone",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "name": "bone_boots",
+      "requirements": {
+        "level": 3,
+        "coins": 250
+      },
+      "ingredients": [
+        {
+          "name": "tattered_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "tattered_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_bone",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "tattered_fabric",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "tattered_cloth_scrap",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "spools_of_thread",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "description": "materials_description",
+      "name": "tattered_leather",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "tattered_pelt",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "monster_blood",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "description": "materials_description",
+      "name": "refined_bone",
+      "ingredients": [
+        {
+          "name": "raw_bone",
+          "raw": 32,
+          "quantity": 32
+        },
+        {
+          "name": "shiny_stone",
+          "raw": 16,
+          "quantity": 16
+        }
+      ]
+    }
+  ],
+
+  "ingredients": {
+    "plant_fiber": {
+      "name": "plant_fiber",
+      "description": "Ingredient Description"
+    },
+    "tattered_cloth_scrap": {
+      "name": "tattered_cloth_scrap",
+      "description": "Ingredient Description"
+    },
+    "spools_of_thread": {
+      "name": "spools_of_thread",
+      "description": "Ingredient Description"
+    },
+    "tattered_pelt": {
+      "name": "tattered_pelt",
+      "description": "Ingredient Description"
+    },
+    "monster_blood": {
+      "name": "monster_blood",
+      "description": "Ingredient Description"
+    },
+    "raw_bone": {
+      "name": "raw_bone",
+      "description": "Ingredient Description"
+    },
+    "shiny_stone": {
+      "name": "shiny_stone",
+      "description": "Ingredient Description"
+    },
+    "magic_crystal": {
+      "name": "magic_crystal",
+      "description": "Ingredient Description"
+    }
+  },
+  "fill_with": [
+    {
+      "category": "armor",
+      "with": "material"
+    }
+  ],
+  "searchable": ["armor"]
+}

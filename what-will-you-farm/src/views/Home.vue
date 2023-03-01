@@ -131,7 +131,7 @@ import { ref, onMounted } from "vue";
 import { database } from "../shared/db";
 import { CraftingItem } from "../shared/db";
 const searchInput = ref("");
-const validForm = false;
+let validForm = false;
 const foundItems = ref([] as CraftingItem[]);
 const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
 const items = database.getAllItems();

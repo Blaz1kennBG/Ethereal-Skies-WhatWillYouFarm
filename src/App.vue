@@ -3,7 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { environment } from "./environment/environment";
-
+import { onMounted } from "vue";
+onMounted(() => {
+  console.log("App.vue mounted");
+});
 console.log("Production: ", process.env.NODE_ENV);
 </script>

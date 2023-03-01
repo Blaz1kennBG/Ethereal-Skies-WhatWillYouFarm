@@ -1,12 +1,13 @@
 {
   "armor": [
     {
+      "viewValue": "Bone Helmet",
       "name": "bone_helmet",
       "requirements": {
         "level": 3,
         "coins": 250
       },
-      "ingredients": [
+      "materials": [
         {
           "name": "tattered_fabric",
           "raw": 3,
@@ -30,12 +31,13 @@
       ]
     },
     {
+      "viewValue": "Bone Chestplate",
       "name": "bone_chestplate",
       "requirements": {
         "level": 3,
         "coins": 250
       },
-      "ingredients": [
+      "materials": [
         {
           "name": "tattered_fabric",
           "raw": 3,
@@ -59,12 +61,13 @@
       ]
     },
     {
+      "viewValue": "Bone Boots",
       "name": "bone_boots",
       "requirements": {
         "level": 3,
         "coins": 250
       },
-      "ingredients": [
+      "materials": [
         {
           "name": "tattered_fabric",
           "raw": 3,
@@ -90,6 +93,7 @@
   ],
   "materials": [
     {
+      "viewValue": "Tattered Fabric",
       "name": "tattered_fabric",
       "description": "materials_description",
       "ingredients": [
@@ -111,6 +115,7 @@
       ]
     },
     {
+      "viewValue": "Tattered Leather",
       "description": "materials_description",
       "name": "tattered_leather",
       "ingredients": [
@@ -132,6 +137,7 @@
       ]
     },
     {
+      "viewValue": "Refined Bone",
       "description": "materials_description",
       "name": "refined_bone",
       "ingredients": [
@@ -146,40 +152,49 @@
           "quantity": 16
         }
       ]
+    },
+    {
+      "viewValue": "Magic Crystal",
+      "description": "materials_description",
+      "name": "magic_crystal",
+      "ingredients": []
     }
   ],
 
   "ingredients": {
     "plant_fiber": {
+      "viewValue": "Plant Fiber",
       "name": "plant_fiber",
       "description": "Ingredient Description"
     },
     "tattered_cloth_scrap": {
+      "viewValue": "Tattered Cloth Scrap",
       "name": "tattered_cloth_scrap",
       "description": "Ingredient Description"
     },
     "spools_of_thread": {
+      "viewValue": "Spools of Thread",
       "name": "spools_of_thread",
       "description": "Ingredient Description"
     },
     "tattered_pelt": {
+      "viewValue": "Tattered Pelt",
       "name": "tattered_pelt",
       "description": "Ingredient Description"
     },
     "monster_blood": {
+      "viewValue": "Monster Blood",
       "name": "monster_blood",
       "description": "Ingredient Description"
     },
     "raw_bone": {
+      "viewValue": "Raw Bone",
       "name": "raw_bone",
       "description": "Ingredient Description"
     },
     "shiny_stone": {
+      "viewValue": "Shiny Stone",
       "name": "shiny_stone",
-      "description": "Ingredient Description"
-    },
-    "magic_crystal": {
-      "name": "magic_crystal",
       "description": "Ingredient Description"
     }
   },

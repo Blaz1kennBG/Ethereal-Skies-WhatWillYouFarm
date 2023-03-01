@@ -29,35 +29,56 @@
             <template v-slot:activator="{ props }">
               <v-list-item
                 v-bind="props"
-                :title="farmingItem.item.name + ` (${farmingItem.quantity})`"
+                :title="
+                  farmingItem.item.viewValue + ` (${farmingItem.quantity})`
+                "
               ></v-list-item>
             </template>
-
-            <v-list-group
-              v-for="(item, i) in farmingItem.item.ingredients"
+            <template
+              v-for="(material, i) in farmingItem.item.materials"
               v-bind:key="i"
             >
-              <template v-slot:activator="{ props }">
+              <v-list-group v-if="material.ingredients.length">
+                <template v-slot:activator="{ props }">
+                  <v-list-item
+                    v-bind="props"
+                    :title="material.viewValue + ` (${material.quantity})`"
+                  >
+                    <v-tooltip
+                      content-class="!bg-neutral-300"
+                      activator="parent"
+                      location="end"
+                      open-delay="400"
+                      >{{
+                        material.description || "Missing description"
+                      }}</v-tooltip
+                    >
+                  </v-list-item>
+                </template>
+
                 <v-list-item
-                  v-bind="props"
-                  :title="item.name + ` (${item.quantity})`"
+                  class="!p-0"
+                  v-for="(itemMats, itmI) in material.ingredients"
+                  v-bind:key="itmI"
                 >
+                  <v-checkbox
+                    :label="itemMats.viewValue + ` (${itemMats.quantity})`"
+                  ></v-checkbox>
+
                   <v-tooltip
+                    open-delay="400"
                     content-class="!bg-neutral-300"
                     activator="parent"
                     location="end"
-                    open-delay="400"
-                    >{{ item.description || "Missing description" }}</v-tooltip
+                    >{{
+                      itemMats.description || "Missing description"
+                    }}</v-tooltip
                   >
                 </v-list-item>
-              </template>
-              <v-list-item
-                class="!p-0"
-                v-for="(itemMats, itmI) in item.materials"
-                v-bind:key="itmI"
-              >
+              </v-list-group>
+              <v-list-item v-else class="!p-0" v-bind:key="i">
                 <v-checkbox
-                  :label="itemMats.name + ` (${itemMats.quantity})`"
+                  :label="material.viewValue + ` (${material.quantity})`"
                 ></v-checkbox>
                 <v-tooltip
                   open-delay="400"
@@ -65,11 +86,11 @@
                   activator="parent"
                   location="end"
                   >{{
-                    itemMats.description || "Missing description"
+                    material.description || "Missing description"
                   }}</v-tooltip
                 >
               </v-list-item>
-            </v-list-group>
+            </template>
           </v-list-group>
         </v-list>
       </v-col>
@@ -84,7 +105,7 @@
           v-bind:key="index"
           variant="tonal"
         >
-          <span>{{ item.name }}</span>
+          <span>{{ item.viewValue }}</span>
           <v-btn class="ms-auto block" @click="addItemToList(item)">Add</v-btn>
         </v-card>
       </v-col>
@@ -93,55 +114,50 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { Weaponry } from "../shared/interfaces/weaponry.interface";
-
+import { ref, onMounted } from "vue";
 import { database } from "../shared/db";
+import { CraftingItem } from "../shared/db";
 const searchInput = ref("");
 const validForm = false;
-const foundItems = ref([]);
-const farmingList = ref([] as { quantity: number; item: Weaponry }[]);
+const foundItems = ref([] as CraftingItem[]);
+const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
 const items = database.getAllItems();
 /* console.log("[ITEMS]: ", items); */
+onMounted(() => {
+  submit();
+});
 function submit() {
-  const found = Object.entries(items)
-    .filter(([key, value]) => items.searchable.includes(key))
-    .map((v) => v[1]);
-  foundItems.value = found.flat();
-}
-function addItemToList(selectedItem: Weaponry) {
-  const exists = farmingList.value.find(
-    (v) => v.item.name === selectedItem.name
+  const found = items.filter((v) =>
+    v.name.includes(searchInput.value.toLowerCase())
   );
+
+  foundItems.value = found;
+}
+function addItemToList(item: CraftingItem) {
+  const exists = farmingList.value.find((v) => v.item.name === item.name);
   if (exists) {
     updateExisting(exists);
   } else {
-    selectedItem.ingredients.forEach((ingr) => {
-      let _mats = [] as any;
-      const foundMats = items.materials.find((v) => v.name === ingr.name);
-      if (foundMats) {
-        _mats = foundMats.ingredients;
-      }
-      ingr.materials = _mats;
-    });
-
-    farmingList.value.push({ quantity: 1, item: selectedItem });
+    console.log(item);
+    farmingList.value.push({ quantity: 1, item });
   }
 }
-function updateExisting(selectedItem: { quantity: number; item: Weaponry }) {
+function updateExisting(selectedItem: {
+  quantity: number;
+  item: CraftingItem;
+}) {
   selectedItem.quantity++;
-  selectedItem.item.ingredients.map((v) => {
-    v.quantity = selectedItem.quantity * v.raw;
-    v.materials = v.materials?.map((m) => ({
-      ...m,
-      quantity: (m.raw || 1) * selectedItem.quantity,
-    }));
-    return v;
+  selectedItem.item.materials.forEach((material) => {
+    material.ingredients = material.ingredients.map((ingredient) => {
+      ingredient.quantity = ingredient.raw * selectedItem.quantity;
+      return ingredient;
+    });
+    material.quantity = material.raw * selectedItem.quantity;
   });
 }
 function removeItemFromList(selectedItem: {
   quantity: number;
-  item: Weaponry;
+  item: CraftingItem;
 }) {
   const index = farmingList.value.findIndex(
     (v) => v.item.name === selectedItem.item.name
@@ -150,9 +166,8 @@ function removeItemFromList(selectedItem: {
     farmingList.value.splice(index, 1);
   }
 }
-function getItem(name: string, category: string) {}
-function getMaterial(name: string) {}
-function log(x) {
+
+function log(x: any) {
   console.log(x);
 }
 </script>

@@ -1,44 +1,87 @@
-import { Ingredient } from "./interfaces/ingredient.interface";
-import { Material } from "./interfaces/material.interface";
-import { Weaponry } from "./interfaces/weaponry.interface";
 import itemsJson from "./items.json";
 
+export interface Requirements {
+  level: number;
+  coins: number;
+}
+
+export interface Material {
+  viewValue: string;
+  name: string;
+  raw: number;
+  quantity: number;
+  description: string;
+  ingredients: Ingredient[];
+}
+
+export interface CraftingItem {
+  viewValue: string;
+  name: string;
+  requirements: Requirements;
+  materials: Material[];
+}
+export interface Ingredient {
+  viewValue: string;
+  name: string;
+  description: string;
+  raw: number;
+  quantity: number;
+}
+
+export interface Root {
+  armor: CraftingItem[];
+  materials: Material[];
+  ingredients: { [key: string]: Ingredient };
+  fill_with: { category: string; with: string }[];
+  searchable: string[];
+  [key: string]: any; // Index signature
+}
+
 export const database = {
-  getAllItems: () => {
-    const modified = itemsJson;
-    // Fill the materials with ingredients
-    modified.materials.forEach((v) => {
-      v.ingredients = v.ingredients.map((ingr) => {
-        const replace =
-          itemsJson.ingredients[
-            ingr.name as keyof typeof itemsJson.ingredients
-          ];
-        return {
-          ...ingr,
-          ...replace,
-        };
+  getAllItems() {
+    const root = itemsJson as any as Root;
+
+    // Loop over the materials in root object
+    root.materials.forEach((material) => {
+      // Loop over the ingredients for each material
+      material.ingredients.forEach((ingredient) => {
+        // Find the matching ingredient in the ingredients object
+        const matchingIngredient = root.ingredients[ingredient.name];
+        // Merge the ingredient with the matching ingredient from the ingredients object
+        Object.assign(ingredient, matchingIngredient);
       });
     });
-    modified.fill_with.forEach((v) => {
-      let category = modified[v.category];
-      category = modified[v.category].map((item: Weaponry) => {
-        /*  console.log("item: ", item); */
-        /* console.log(item.name, item.ingredients); */
-        return {
-          ...item,
-          ingredients: (item.ingredients = item.ingredients.map((mat) => {
-            const existing = modified.materials.find(
-              (_) => _.name === mat.name
-            );
-            return {
-              ...mat,
-              ...existing,
-            };
-          })),
-        };
+
+    // Loop over the fill_with array in the root object
+    root.fill_with.forEach((fillItem) => {
+      // Find the property in the root object that is equal to fillItem.category
+      const category = root[fillItem.category];
+      // Loop over the category
+      category.forEach((categoryItem: CraftingItem) => {
+        // Loop over the ingredients for each category item
+        if (!categoryItem.materials) {
+          console.warn("ERROR: ", categoryItem);
+        }
+        categoryItem.materials.forEach((ingredient) => {
+          // Find the matching ingredient in the materials property of the root object
+          const matchingMaterial = root.materials.find(
+            (material) => material.name === ingredient.name
+          );
+
+          if (matchingMaterial) {
+            // Merge the ingredient with the matching ingredient from the materials property of the root object
+            Object.assign(ingredient, matchingMaterial);
+          } else {
+            Object.assign(ingredient);
+          }
+        });
       });
     });
-    console.log(modified);
-    return modified;
+    const base: CraftingItem[] = root.searchable
+      .map((v) => root[v])
+      .flat() as CraftingItem[];
+
+    console.log(base);
+    return base;
   },
 };

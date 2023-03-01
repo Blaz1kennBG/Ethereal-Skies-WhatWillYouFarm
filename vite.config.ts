@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          "/": ["./src/views/Home"],
+          "/home": ["./src/views/Home"],
         },
       },
     },

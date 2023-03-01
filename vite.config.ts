@@ -31,5 +31,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: "/ethereal-skies-wwyf/" /*  process.env.NODE_ENV === "production" ? "/ethereal-skies-wwyf/" : "/", */,
+  base: process.env.NODE_ENV === "production" ? "/dist/" : "/",
 });

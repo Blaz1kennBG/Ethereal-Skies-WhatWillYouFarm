@@ -1,6 +1,7 @@
 {
   "armor": [
     {
+      "type": "armor",
       "viewValue": "Bone Helmet",
       "name": "bone_helmet",
       "requirements": {
@@ -31,10 +32,11 @@
       ]
     },
     {
-      "viewValue": "Bone Chestplate",
-      "name": "bone_chestplate",
+      "type": "armor",
+      "viewValue": "Bone Boots",
+      "name": "bone_boots",
       "requirements": {
-        "level": 3,
+        "level": 6,
         "coins": 250
       },
       "materials": [
@@ -61,10 +63,10 @@
       ]
     },
     {
-      "viewValue": "Bone Boots",
-      "name": "bone_boots",
+      "viewValue": "Bone Leggings",
+      "name": "bone_leggings",
       "requirements": {
-        "level": 3,
+        "level": 6,
         "coins": 250
       },
       "materials": [
@@ -80,8 +82,446 @@
         },
         {
           "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
           "raw": 6,
           "quantity": 6
+        }
+      ]
+    },
+    {
+      "viewValue": "Bone Chestplate",
+      "name": "bone_chestplate",
+      "requirements": {
+        "level": 12,
+        "coins": 250
+      },
+      "materials": [
+        {
+          "name": "tattered_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "tattered_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    }
+  ],
+  "weapon": [
+    {
+      "type": "weapon",
+      "viewValue": "Wooden Sword",
+      "name": "wooden_sword",
+      "requirements": {
+        "level": 0,
+        "coins": 5
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Sword",
+      "name": "bone_sword",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Claw",
+      "name": "bone_claw",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Dagger",
+      "name": "bone_dagger",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Tanto",
+      "name": "bone_tanto",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Halberd",
+      "name": "bone_halberd",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Hammer",
+      "name": "bone_hammer",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Spear",
+      "name": "bone_spear",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Grimoire",
+      "name": "bone_grimoire",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Staff",
+      "name": "bone_staff",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Holystaff",
+      "name": "bone_holystaff",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Greatsword",
+      "name": "bone_greatsword",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Battleaxe",
+      "name": "bone_battleaxe",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Scythe",
+      "name": "bone_scythe",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Warhammer",
+      "name": "bone_warhammer",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "viewValue": "Bone Shield",
+      "name": "bone_shield",
+      "requirements": {
+        "level": 1,
+        "coins": 25
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_bone",
+          "raw": 12,
+          "quantity": 12
         },
         {
           "name": "magic_crystal",
@@ -93,6 +533,7 @@
   ],
   "materials": [
     {
+      "type": "materials",
       "viewValue": "Tattered Fabric",
       "name": "tattered_fabric",
       "description": "materials_description",
@@ -115,6 +556,7 @@
       ]
     },
     {
+      "type": "materials",
       "viewValue": "Tattered Leather",
       "description": "materials_description",
       "name": "tattered_leather",
@@ -137,6 +579,7 @@
       ]
     },
     {
+      "type": "materials",
       "viewValue": "Refined Bone",
       "description": "materials_description",
       "name": "refined_bone",
@@ -154,47 +597,101 @@
       ]
     },
     {
+      "type": "materials",
       "viewValue": "Magic Crystal",
       "description": "materials_description",
       "name": "magic_crystal",
       "ingredients": []
+    },
+    {
+      "type": "materials",
+      "viewValue": "Rotten Plank",
+      "name": "rotten_plank",
+      "description": "Ingredient Description",
+      "ingredients": [
+        {
+          "type": "materials",
+          "viewValue": "Sturdy Stick",
+          "name": "sturdy_stick",
+          "quantity": 8,
+          "raw": 8
+        },
+        {
+          "type": "materials",
+          "viewValue": "Rotten Log",
+          "name": "rotten_log",
+          "quantity": 16,
+          "raw": 16
+        },
+        {
+          "type": "materials",
+          "viewValue": "Ancient Roots",
+          "name": "ancient_roots",
+          "quantity": 8,
+          "raw": 8
+        }
+      ]
     }
   ],
-
   "ingredients": {
     "plant_fiber": {
+      "type": "ingredients",
       "viewValue": "Plant Fiber",
       "name": "plant_fiber",
       "description": "Ingredient Description"
     },
     "tattered_cloth_scrap": {
+      "type": "ingredients",
       "viewValue": "Tattered Cloth Scrap",
       "name": "tattered_cloth_scrap",
       "description": "Ingredient Description"
     },
     "spools_of_thread": {
+      "type": "ingredients",
       "viewValue": "Spools of Thread",
       "name": "spools_of_thread",
       "description": "Ingredient Description"
     },
     "tattered_pelt": {
+      "type": "ingredients",
       "viewValue": "Tattered Pelt",
       "name": "tattered_pelt",
       "description": "Ingredient Description"
     },
     "monster_blood": {
+      "type": "ingredients",
       "viewValue": "Monster Blood",
       "name": "monster_blood",
       "description": "Ingredient Description"
     },
     "raw_bone": {
+      "type": "ingredients",
       "viewValue": "Raw Bone",
       "name": "raw_bone",
       "description": "Ingredient Description"
     },
     "shiny_stone": {
+      "type": "ingredients",
       "viewValue": "Shiny Stone",
       "name": "shiny_stone",
+      "description": "Ingredient Description"
+    },
+    "sturdy_stick": {
+      "type": "ingredients",
+      "viewValue": "Sturdy Stick",
+      "name": "sturdy_stick",
+      "description": "Ingredient Description"
+    },
+    "rotten_log": {
+      "type": "ingredients",
+      "viewValue": "Rotten Log",
+      "name": "rotten_log",
+      "description": "Ingredient Description"
+    },
+    "ancient_roots": {
+      "type": "ingredients",
+      "viewValue": "Ancient Roots",
+      "name": "ancient_roots",
       "description": "Ingredient Description"
     }
   },
@@ -202,7 +699,11 @@
     {
       "category": "armor",
       "with": "material"
+    },
+    {
+      "category": "weapon",
+      "with": "material"
     }
   ],
-  "searchable": ["armor"]
+  "searchable": ["armor", "weapon"]
 }

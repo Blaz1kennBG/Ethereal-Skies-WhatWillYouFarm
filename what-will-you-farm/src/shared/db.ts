@@ -6,6 +6,7 @@ export interface Requirements {
 }
 
 export interface Material {
+  type: string;
   viewValue: string;
   name: string;
   raw: number;
@@ -15,12 +16,14 @@ export interface Material {
 }
 
 export interface CraftingItem {
+  type: string;
   viewValue: string;
   name: string;
   requirements: Requirements;
   materials: Material[];
 }
 export interface Ingredient {
+  type: string;
   viewValue: string;
   name: string;
   description: string;
@@ -30,6 +33,7 @@ export interface Ingredient {
 
 export interface Root {
   armor: CraftingItem[];
+  weapon: CraftingItem[];
   materials: Material[];
   ingredients: { [key: string]: Ingredient };
   fill_with: { category: string; with: string }[];

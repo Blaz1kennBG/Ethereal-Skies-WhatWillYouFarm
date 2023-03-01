@@ -18,7 +18,7 @@
     <v-row class="h-full">
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100"
+        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-24"
         >Farming list
         <v-list
           class="!my-2"
@@ -33,6 +33,8 @@
                   farmingItem.item.viewValue + ` (${farmingItem.quantity})`
                 "
               ></v-list-item>
+              {{ log(props) }}
+              <!--      <span v-bind="props">ACTIVATOR</span> -->
             </template>
             <template
               v-for="(material, i) in farmingItem.item.materials"
@@ -96,7 +98,7 @@
       </v-col>
       <v-col
         md="8"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100"
+        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto"
       >
         Item list
         <v-card
@@ -105,7 +107,18 @@
           v-bind:key="index"
           variant="tonal"
         >
-          <span>{{ item.viewValue }}</span>
+          <span
+            data-width="28"
+            data-height="28"
+            class="iconify"
+            :data-icon="
+              item.type === 'armor'
+                ? 'game-icons:chest-armor'
+                : 'ph:sword-light'
+            "
+          ></span>
+
+          <span class="ml-2">{{ item.viewValue }}</span>
           <v-btn class="ms-auto block" @click="addItemToList(item)">Add</v-btn>
         </v-card>
       </v-col>

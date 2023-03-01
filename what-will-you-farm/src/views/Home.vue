@@ -135,7 +135,7 @@ let validForm = false;
 const foundItems = ref([] as CraftingItem[]);
 const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
 const items = database.getAllItems();
-/* console.log("[ITEMS]: ", items); */
+
 onMounted(() => {
   submit();
 });

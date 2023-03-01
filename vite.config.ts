@@ -8,6 +8,16 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "/": ["./src/views/Home"],
+        },
+      },
+    },
+  },
+
   plugins: [
     vue({
       template: { transformAssetUrls },

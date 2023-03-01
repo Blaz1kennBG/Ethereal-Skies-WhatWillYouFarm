@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          "/home": ["./src/views/Home"],
+          home: ["./src/views/Home"],
         },
       },
     },
@@ -41,5 +41,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: process.env.NODE_ENV === "production" ? "/ethereal-skies-wwyf/" : "/",
+  base: "/",
 });

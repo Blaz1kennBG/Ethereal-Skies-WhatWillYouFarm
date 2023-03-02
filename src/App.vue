@@ -1,6 +1,5 @@
 <template>
   <router-view />
-  <div class="text-red-500">APP.vue</div>
 </template>
 
 <script lang="ts" setup>

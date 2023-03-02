@@ -6,5 +6,4 @@
 
 <script lang="ts" setup>
 //
-console.log("View.vue");
 </script>

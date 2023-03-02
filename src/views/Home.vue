@@ -137,7 +137,6 @@ const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
 const items = database.getAllItems();
 
 onMounted(() => {
-  console.log("Home.vue mounted");
   submit();
 });
 function submit() {

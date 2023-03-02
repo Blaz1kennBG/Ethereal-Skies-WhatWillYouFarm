@@ -16,6 +16,7 @@ export interface Material {
 }
 
 export interface CraftingItem {
+  description?: string;
   type: string;
   viewValue: string;
   name: string;
@@ -40,7 +41,11 @@ export interface Root {
   searchable: string[];
   [key: string]: any; // Index signature
 }
-
+export interface FarmingMaterial {
+  quantity: number;
+  item: any;
+  checked: boolean;
+}
 export const database = {
   getAllItems() {
     const root = itemsJson as any as Root;

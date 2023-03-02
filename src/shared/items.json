@@ -533,6 +533,102 @@
       ]
     }
   ],
+  "accessory": [
+    {
+      "type": "accessory",
+      "viewValue": "Iron Bracers",
+      "name": "iron_bracers",
+      "requirements": {
+        "level": 1,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "tattered_leather",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "accessory",
+      "viewValue": "Iron Belt",
+      "name": "iron_belt",
+      "requirements": {
+        "level": 3,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "tattered_leather",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "accessory",
+      "viewValue": "Iron Ring",
+      "name": "iron_ring",
+      "requirements": {
+        "level": 5,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "refined_iron",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "accessory",
+      "viewValue": "Iron Necklace",
+      "name": "iron_necklace",
+      "requirements": {
+        "level": 8,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "refined_iron",
+          "raw": 15,
+          "quantity": 15
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    }
+  ],
   "materials": [
     {
       "type": "materials",
@@ -577,6 +673,19 @@
           "name": "monster_blood",
           "raw": 4,
           "quantity": 4
+        }
+      ]
+    },
+    {
+      "type": "materials",
+      "viewValue": "Refined Iron",
+      "description": "materials_description",
+      "name": "refined_iron",
+      "ingredients": [
+        {
+          "name": "raw_iron",
+          "raw": 32,
+          "quantity": 32
         }
       ]
     },
@@ -695,6 +804,12 @@
       "viewValue": "Ancient Roots",
       "name": "ancient_roots",
       "description": "Ingredient Description"
+    },
+    "raw_iron": {
+      "type": "ingredients",
+      "viewValue": "Raw Iron",
+      "name": "raw_iron",
+      "description": "Ingredient Description"
     }
   },
   "fill_with": [
@@ -705,7 +820,11 @@
     {
       "category": "weapon",
       "with": "material"
+    },
+    {
+      "category": "accessory",
+      "with": "material"
     }
   ],
-  "searchable": ["armor", "weapon"]
+  "searchable": ["armor", "weapon", "accessory"]
 }

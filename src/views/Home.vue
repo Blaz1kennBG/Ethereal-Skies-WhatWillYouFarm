@@ -251,9 +251,27 @@ function log(...x: any) {
           @click="generateFarmingMaterialList()"
           >Generate</v-btn
         >
-
+        <h1 class="my-1">Materials</h1>
         <v-card
-          v-for="material in materialFarmingList"
+          v-for="material in materialFarmingList.filter(
+            (v) => v.item.type === 'materials'
+          )"
+          :key="material.item.name"
+        >
+          <div class="flex flex-row items-center">
+            <v-checkbox-btn
+              :label="`${material.item.viewValue} (${material.quantity})`"
+              v-model="material.checked"
+              @click="log(material)"
+            >
+            </v-checkbox-btn>
+          </div>
+        </v-card>
+        <h1 class="my-1">Ingredients</h1>
+        <v-card
+          v-for="material in materialFarmingList.filter(
+            (v) => v.item.type === 'ingredients'
+          )"
           :key="material.item.name"
         >
           <div class="flex flex-row items-center">

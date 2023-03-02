@@ -137,7 +137,21 @@ function log(...x: any) {
                 "
                 :props="props"
                 :isOpen="isOpen"
-              />
+              >
+                <template v-slot:label-prepend>
+                  <div class="flex flex-row gap-x-2 mx-auto items-center">
+                    <span
+                      data-width="25"
+                      data-height="25"
+                      class="iconify"
+                      data-icon="system-uicons:coins"
+                    ></span>
+                    <span>{{
+                      farmingItem.item.requirements.coins * farmingItem.quantity
+                    }}</span>
+                  </div>
+                </template>
+              </list-group-activator>
             </template>
             <template
               v-for="(material, i) in farmingItem.item.materials"

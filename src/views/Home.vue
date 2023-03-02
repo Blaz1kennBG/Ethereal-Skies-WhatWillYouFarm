@@ -13,12 +13,14 @@ const items = database.getAllItems();
 
 onMounted(() => {
   submit();
-  fetch(
-    "https://ethereal-skies-wwyf.s3.eu-central-1.amazonaws.com/items.json",
-    {
-      method: "GET",
-    }
-  ).then((m) => console.log(m));
+  try {
+    fetch(
+      "https://ethereal-skies-wwyf.s3.eu-central-1.amazonaws.com/items.json",
+      {
+        method: "GET",
+      }
+    ).then((m) => console.log(m));
+  } catch (e) {}
 });
 function submit() {
   const found = items.filter((v) =>

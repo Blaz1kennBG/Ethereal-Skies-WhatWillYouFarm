@@ -79,8 +79,12 @@ function removeItem(selectedItem: { quantity: number; item: CraftingItem }) {
   if (index !== -1) {
     farmingList.value.splice(index, 1);
   }
+  changes.value = true;
 }
-
+function clearLists() {
+  farmingList.value = [];
+  materialFarmingList.value = [];
+}
 function log(...x: any) {
   console.log(x);
 }
@@ -98,20 +102,23 @@ function log(...x: any) {
         <v-form
           v-model="validForm"
           @submit.prevent="submit"
-          class="flex flex-row gap-x-3 items-center"
+          class="flex flex-col gap-x-3"
         >
           <v-text-field
             v-model="searchInput"
             label="Armor, weapon, accessories...."
           ></v-text-field>
-          <v-btn type="submit">Search</v-btn>
+          <div class="flex gap-x-3">
+            <v-btn type="submit" variant="tonal">Search</v-btn>
+            <v-btn type="button" @click="clearLists()">Clear lists</v-btn>
+          </div>
         </v-form>
       </v-col>
     </v-row>
     <v-row class="h-full">
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-24"
+        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
         >Farming list
         <v-list
           class="!my-2 !p-0"
@@ -190,7 +197,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto"
+        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
       >
         Item list
         <v-card
@@ -220,7 +227,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-24"
+        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
       >
         All Items to farm
         <v-btn

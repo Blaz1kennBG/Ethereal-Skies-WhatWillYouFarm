@@ -49,7 +49,7 @@ function addMaterialsToList(newItem: FarmingMaterial) {
   if (!exists) {
     materialFarmingList.value.push(newItem);
   } else {
-    exists.quantity++;
+    exists.quantity += newItem.quantity;
   }
   changes.value = false;
 }

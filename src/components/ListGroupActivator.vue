@@ -38,7 +38,7 @@
       </i>
       <i
         class="transition-all duration-500"
-        :class="{ 'rotate-0': isOpen, 'rotate-180': !isOpen }"
+        :class="{ 'rotate-180': isOpen, 'rotate-0': !isOpen }"
       >
         <span
           data-width="24"

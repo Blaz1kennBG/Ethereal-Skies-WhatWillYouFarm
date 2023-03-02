@@ -6,4 +6,5 @@
 
 <script lang="ts" setup>
 import DefaultView from "./View.vue";
+console.log("Default.vue");
 </script>

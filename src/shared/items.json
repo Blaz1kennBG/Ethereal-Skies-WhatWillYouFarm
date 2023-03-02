@@ -63,6 +63,7 @@
       ]
     },
     {
+      "type": "armor",
       "viewValue": "Bone Leggings",
       "name": "bone_leggings",
       "requirements": {
@@ -93,6 +94,7 @@
       ]
     },
     {
+      "type": "armor",
       "viewValue": "Bone Chestplate",
       "name": "bone_chestplate",
       "requirements": {

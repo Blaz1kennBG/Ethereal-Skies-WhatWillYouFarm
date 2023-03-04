@@ -18,12 +18,9 @@ onMounted(() => {
   submit();
 });
 function submit() {
-  const found = items.filter((v) => {
-    console.log(v.viewValue, searchInput.value.trim().toLowerCase());
-    return v.viewValue
-      .toLowerCase()
-      .includes(searchInput.value.trim().toLowerCase());
-  });
+  const found = items.filter((v) =>
+    v.viewValue.toLowerCase().includes(searchInput.value.trim().toLowerCase())
+  );
 
   foundItems.value = found;
 }

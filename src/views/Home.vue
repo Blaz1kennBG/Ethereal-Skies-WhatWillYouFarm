@@ -146,7 +146,7 @@ function log(...x: any) {
     <v-row class="h-full">
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
+        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
         >Farming list
         <v-list
           class="!my-2 !p-0"
@@ -239,7 +239,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
+        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
         Item list
         <v-card
@@ -261,7 +261,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="h-full bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28"
+        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
         All Items to farm
         <v-btn

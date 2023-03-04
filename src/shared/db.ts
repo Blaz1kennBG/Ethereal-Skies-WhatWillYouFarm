@@ -17,6 +17,7 @@ export interface Material {
 }
 
 export interface CraftingItem {
+  icon: string;
   description?: string;
   type: string;
   viewValue: string;

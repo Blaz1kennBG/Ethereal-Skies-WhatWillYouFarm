@@ -1,6 +1,7 @@
 {
   "armor": [
     {
+      "icon": "game-icons:chest-armor",
       "type": "armor",
       "viewValue": "Bone Helmet",
       "name": "bone_helmet",
@@ -32,6 +33,7 @@
       ]
     },
     {
+      "icon": "game-icons:chest-armor",
       "type": "armor",
       "viewValue": "Bone Boots",
       "name": "bone_boots",
@@ -63,6 +65,7 @@
       ]
     },
     {
+      "icon": "game-icons:chest-armor",
       "type": "armor",
       "viewValue": "Bone Leggings",
       "name": "bone_leggings",
@@ -94,6 +97,7 @@
       ]
     },
     {
+      "icon": "game-icons:chest-armor",
       "type": "armor",
       "viewValue": "Bone Chestplate",
       "name": "bone_chestplate",
@@ -127,6 +131,7 @@
   ],
   "weapon": [
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Wooden Sword",
       "name": "wooden_sword",
@@ -143,6 +148,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Sword",
       "name": "bone_sword",
@@ -169,6 +175,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Claw",
       "name": "bone_claw",
@@ -195,6 +202,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Dagger",
       "name": "bone_dagger",
@@ -221,6 +229,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Tanto",
       "name": "bone_tanto",
@@ -247,6 +256,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Halberd",
       "name": "bone_halberd",
@@ -273,6 +283,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Hammer",
       "name": "bone_hammer",
@@ -299,6 +310,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Spear",
       "name": "bone_spear",
@@ -325,6 +337,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Grimoire",
       "name": "bone_grimoire",
@@ -351,6 +364,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Staff",
       "name": "bone_staff",
@@ -377,6 +391,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Holystaff",
       "name": "bone_holystaff",
@@ -403,6 +418,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Greatsword",
       "name": "bone_greatsword",
@@ -429,6 +445,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Battleaxe",
       "name": "bone_battleaxe",
@@ -455,6 +472,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Scythe",
       "name": "bone_scythe",
@@ -481,6 +499,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Warhammer",
       "name": "bone_warhammer",
@@ -507,6 +526,7 @@
       ]
     },
     {
+      "icon": "ph:sword-light",
       "type": "weapon",
       "viewValue": "Bone Shield",
       "name": "bone_shield",
@@ -535,6 +555,7 @@
   ],
   "tool": [
     {
+      "icon": "mdi:pickaxe",
       "type": "tool",
       "viewValue": "Iron Pickaxe",
       "name": "iron_pickaxe",
@@ -561,6 +582,7 @@
       ]
     },
     {
+      "icon": "mdi:pickaxe",
       "type": "tool",
       "viewValue": "Iron Shovel",
       "name": "iron_shovel",
@@ -587,6 +609,7 @@
       ]
     },
     {
+      "icon": "mdi:pickaxe",
       "type": "tool",
       "viewValue": "Iron Axe",
       "name": "iron_axe",
@@ -613,6 +636,7 @@
       ]
     },
     {
+      "icon": "mdi:pickaxe",
       "type": "tool",
       "viewValue": "Iron Rod",
       "name": "iron_rod",
@@ -641,6 +665,7 @@
   ],
   "accessory": [
     {
+      "icon": "maki:jewelry-store",
       "type": "accessory",
       "viewValue": "Iron Bracers",
       "name": "iron_bracers",
@@ -667,6 +692,7 @@
       ]
     },
     {
+      "icon": "maki:jewelry-store",
       "type": "accessory",
       "viewValue": "Iron Belt",
       "name": "iron_belt",
@@ -693,6 +719,7 @@
       ]
     },
     {
+      "icon": "maki:jewelry-store",
       "type": "accessory",
       "viewValue": "Iron Ring",
       "name": "iron_ring",
@@ -714,6 +741,7 @@
       ]
     },
     {
+      "icon": "maki:jewelry-store",
       "type": "accessory",
       "viewValue": "Iron Necklace",
       "name": "iron_necklace",

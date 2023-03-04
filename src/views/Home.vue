@@ -246,15 +246,7 @@ function log(...x: any) {
             data-width="23"
             data-height="23"
             class="iconify"
-            :data-icon="
-              item.type === 'armor'
-                ? 'game-icons:chest-armor'
-                : item.type === 'weapon'
-                ? 'ph:sword-light'
-                : item.type === 'accessory'
-                ? 'maki:jewelry-store'
-                : ''
-            "
+            :data-icon="item.icon"
           ></span>
 
           <span class="ml-2">{{ item.viewValue }}</span>

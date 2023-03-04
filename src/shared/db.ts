@@ -6,6 +6,7 @@ export interface Requirements {
 }
 
 export interface Material {
+  craftable_amount: number;
   type: string;
   viewValue: string;
   name: string;
@@ -79,6 +80,9 @@ export const database = {
 
           if (matchingMaterial) {
             // Merge the ingredient with the matching ingredient from the materials property of the root object
+            matchingMaterial.ingredients = matchingMaterial.ingredients.map(
+              (v) => ({ ...v })
+            );
             Object.assign(ingredient, matchingMaterial);
           } else {
             Object.assign(ingredient);
@@ -90,7 +94,6 @@ export const database = {
       .map((v) => root[v])
       .flat() as CraftingItem[];
 
-    console.log(base);
     return base;
   },
 };

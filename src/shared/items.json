@@ -418,8 +418,8 @@
         },
         {
           "name": "refined_bone",
-          "raw": 12,
-          "quantity": 12
+          "raw": 16,
+          "quantity": 16
         },
         {
           "name": "magic_crystal",
@@ -444,8 +444,8 @@
         },
         {
           "name": "refined_bone",
-          "raw": 12,
-          "quantity": 12
+          "raw": 16,
+          "quantity": 16
         },
         {
           "name": "magic_crystal",
@@ -470,8 +470,8 @@
         },
         {
           "name": "refined_bone",
-          "raw": 12,
-          "quantity": 12
+          "raw": 16,
+          "quantity": 16
         },
         {
           "name": "magic_crystal",
@@ -496,8 +496,8 @@
         },
         {
           "name": "refined_bone",
-          "raw": 12,
-          "quantity": 12
+          "raw": 16,
+          "quantity": 16
         },
         {
           "name": "magic_crystal",
@@ -631,6 +631,7 @@
   ],
   "materials": [
     {
+      "craftable_amount": 6,
       "type": "materials",
       "viewValue": "Tattered Fabric",
       "name": "tattered_fabric",
@@ -654,6 +655,7 @@
       ]
     },
     {
+      "craftable_amount": 6,
       "type": "materials",
       "viewValue": "Tattered Leather",
       "description": "materials_description",
@@ -677,6 +679,7 @@
       ]
     },
     {
+      "craftable_amount": 4,
       "type": "materials",
       "viewValue": "Refined Iron",
       "description": "materials_description",
@@ -690,6 +693,7 @@
       ]
     },
     {
+      "craftable_amount": 8,
       "type": "materials",
       "viewValue": "Refined Bone",
       "description": "materials_description",
@@ -715,6 +719,7 @@
       "ingredients": []
     },
     {
+      "craftable_amount": 6,
       "type": "materials",
       "viewValue": "Rotten Plank",
       "name": "rotten_plank",

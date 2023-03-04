@@ -3,6 +3,7 @@ import ListGroupActivator from "@/components/ListGroupActivator.vue";
 import { ref, onMounted } from "vue";
 import { database, FarmingMaterial } from "../shared/db";
 import { CraftingItem } from "../shared/db";
+import { cloneDeep } from "lodash-es";
 const searchInput = ref("");
 let validForm = false;
 const foundItems = ref([] as CraftingItem[]);
@@ -13,18 +14,10 @@ const items = database.getAllItems();
 
 onMounted(() => {
   submit();
-  try {
-    fetch(
-      "https://ethereal-skies-wwyf.s3.eu-central-1.amazonaws.com/items.json",
-      {
-        method: "GET",
-      }
-    ).then((m) => console.log(m));
-  } catch (e) {}
 });
 function submit() {
   const found = items.filter((v) =>
-    v.name.includes(searchInput.value.toLowerCase())
+    v.name.includes(searchInput.value.trim().toLowerCase())
   );
   foundItems.value = found;
 }
@@ -33,8 +26,22 @@ function addItemToList(item: CraftingItem) {
   if (exists) {
     updateExisting(exists);
   } else {
-    farmingList.value.push({ quantity: 1, item });
+    const _item = cloneDeep(item) as CraftingItem;
+    _item.materials.forEach((material) => {
+      const craftsAmount = Math.ceil(
+        material.quantity / material.craftable_amount
+      );
+
+      material.ingredients.map((ingredient) => {
+        ingredient.quantity = ingredient.raw * craftsAmount;
+        return {
+          ...ingredient,
+        };
+      });
+    });
+    farmingList.value.push({ quantity: 1, item: _item });
   }
+
   changes.value = true;
 }
 function updateExisting(selectedItem: {
@@ -85,7 +92,9 @@ function removeItem(selectedItem: { quantity: number; item: CraftingItem }) {
     (v) => v.item.name === selectedItem.item.name
   );
   if (index !== -1) {
-    farmingList.value.splice(index, 1);
+    const newArr = farmingList.value.slice();
+    newArr.splice(index, 1);
+    farmingList.value = newArr;
   }
   changes.value = true;
 }
@@ -169,7 +178,7 @@ function log(...x: any) {
                 <template v-slot:activator="{ props, isOpen }">
                   <list-group-activator
                     class="px-8"
-                    :title="`${material.viewValue} (${farmingItem.quantity})`"
+                    :title="`${material.viewValue} (${material.quantity})`"
                     :item-type="material.type"
                     :description="
                       material.description || 'Missing item description'

@@ -18,9 +18,12 @@ onMounted(() => {
   submit();
 });
 function submit() {
-  const found = items.filter((v) =>
-    v.name.includes(searchInput.value.trim().toLowerCase())
-  );
+  const found = items.filter((v) => {
+    console.log(v.viewValue, searchInput.value.trim().toLowerCase());
+    return v.viewValue
+      .toLowerCase()
+      .includes(searchInput.value.trim().toLowerCase());
+  });
 
   foundItems.value = found;
 }
@@ -112,7 +115,6 @@ function clearLists() {
 }
 function onSearch(value: string) {
   searchInput.value = value;
-
   submit();
 }
 function log(...x: any) {

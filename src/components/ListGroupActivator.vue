@@ -5,20 +5,12 @@
     class="w-full flex flex-row items-center hover:bg-white hover:bg-opacity-5 transition-all duration-500 py-3 px-3"
   >
     <span class="flex flex-row items-center">
-      <i class="mr-2">
+      <i class="mr-2" v-if="icon">
         <span
           data-width="23"
           data-height="23"
           class="iconify"
-          :data-icon="
-            itemType === 'armor'
-              ? 'game-icons:chest-armor'
-              : itemType === 'weapon'
-              ? 'ph:sword-light'
-              : itemType === 'accessory'
-              ? 'maki:jewelry-store'
-              : ''
-          "
+          :data-icon="icon"
         ></span>
       </i>
       {{ title }}</span
@@ -60,6 +52,7 @@
 </template>
 <script setup lang="ts">
 defineProps<{
+  icon?: string;
   itemType: string;
   description: string;
   title: string;

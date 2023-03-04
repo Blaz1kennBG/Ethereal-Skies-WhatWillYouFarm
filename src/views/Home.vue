@@ -4,8 +4,10 @@ import { ref, onMounted } from "vue";
 import { database, FarmingMaterial } from "../shared/db";
 import { CraftingItem } from "../shared/db";
 import { cloneDeep } from "lodash-es";
+import Header from "@/layouts/default/Header.vue";
 const searchInput = ref("");
 let validForm = false;
+const compact = ref(false);
 const foundItems = ref([] as CraftingItem[]);
 const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
 const materialFarmingList = ref([] as FarmingMaterial[]);
@@ -118,7 +120,11 @@ function log(...x: any) {
 }
 </style>
 <template>
-  <v-container class="h-screen overflow-hidden">
+  <v-container
+    class="h-screen overflow-hidden transition-all duration-500"
+    :class="{ '!max-w-[100vw]': !compact }"
+  >
+    <Header @onCompact="() => (compact = !compact)" />
     <v-row>
       <v-col md="12" class="bg-neutral-900">
         <v-form

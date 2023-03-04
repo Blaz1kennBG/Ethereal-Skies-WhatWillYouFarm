@@ -21,6 +21,7 @@ function submit() {
   const found = items.filter((v) =>
     v.name.includes(searchInput.value.trim().toLowerCase())
   );
+
   foundItems.value = found;
 }
 function addItemToList(item: CraftingItem) {
@@ -109,6 +110,11 @@ function clearLists() {
   farmingList.value = [];
   materialFarmingList.value = [];
 }
+function onSearch(value: string) {
+  searchInput.value = value;
+
+  submit();
+}
 function log(...x: any) {
   console.log(x);
 }
@@ -133,6 +139,7 @@ function log(...x: any) {
           class="flex flex-col gap-x-3"
         >
           <v-text-field
+            @update:model-value="onSearch($event)"
             v-model="searchInput"
             label="Armor, weapon, accessories...."
           ></v-text-field>

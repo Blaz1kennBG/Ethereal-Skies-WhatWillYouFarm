@@ -26,7 +26,7 @@ function addItemToList(item: CraftingItem) {
   if (exists) {
     updateExisting(exists);
   } else {
-    const _item = cloneDeep(item) as CraftingItem;
+    const _item = cloneDeep(item);
     _item.materials.forEach((material) => {
       const craftsAmount = Math.ceil(
         material.quantity / material.craftable_amount
@@ -41,7 +41,7 @@ function addItemToList(item: CraftingItem) {
     });
     farmingList.value.push({ quantity: 1, item: _item });
   }
-
+  console.log();
   changes.value = true;
 }
 function updateExisting(selectedItem: {
@@ -50,11 +50,16 @@ function updateExisting(selectedItem: {
 }) {
   selectedItem.quantity++;
   selectedItem.item.materials.forEach((material) => {
-    material.ingredients = material.ingredients.map((ingredient) => {
-      ingredient.quantity = ingredient.raw * selectedItem.quantity;
-      return ingredient;
-    });
     material.quantity = material.raw * selectedItem.quantity;
+    const craftsAmount = Math.ceil(
+      material.quantity / material.craftable_amount
+    );
+    material.ingredients.map((ingredient) => {
+      ingredient.quantity = ingredient.raw * craftsAmount;
+      return {
+        ...ingredient,
+      };
+    });
   });
 }
 function addMaterialsToList(newItem: FarmingMaterial) {

@@ -533,6 +533,112 @@
       ]
     }
   ],
+  "tool": [
+    {
+      "type": "tool",
+      "viewValue": "Iron Pickaxe",
+      "name": "iron_pickaxe",
+      "requirements": {
+        "level": 15,
+        "coins": 250
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "viewValue": "Iron Shovel",
+      "name": "iron_shovel",
+      "requirements": {
+        "level": 15,
+        "coins": 250
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "viewValue": "Iron Axe",
+      "name": "iron_axe",
+      "requirements": {
+        "level": 15,
+        "coins": 250
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "viewValue": "Iron Rod",
+      "name": "iron_rod",
+      "requirements": {
+        "level": 15,
+        "coins": 250
+      },
+      "materials": [
+        {
+          "name": "rotten_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_iron",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 6,
+          "quantity": 6
+        }
+      ]
+    }
+  ],
   "accessory": [
     {
       "type": "accessory",
@@ -829,7 +935,11 @@
     {
       "category": "accessory",
       "with": "material"
+    },
+    {
+      "category": "tools",
+      "with": "material"
     }
   ],
-  "searchable": ["armor", "weapon", "accessory"]
+  "searchable": ["armor", "weapon", "accessory", "tool"]
 }

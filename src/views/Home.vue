@@ -282,7 +282,11 @@ function log(...x: any) {
                 </template>
               </list-group-activator>
             </template>
-            <h1 class="ml-2">Materials</h1>
+            <div class="mt-2 mb-1 flex flex-row items-center">
+              <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+              <h1 class="uppercase">Materials</h1>
+              <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+            </div>
             <template v-for="(material, i) in farmingItem.materials" :key="i">
               <v-card>
                 <div class="flex flex-row items-center">
@@ -293,7 +297,11 @@ function log(...x: any) {
                 </div>
               </v-card>
             </template>
-            <h1 class="ml-2">Ingredients</h1>
+            <div class="mt-2 mb-1 flex flex-row items-center">
+              <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+              <h1 class="uppercase">Ingredients</h1>
+              <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+            </div>
             <template
               v-for="(ingredient, i) in farmingItem.ingredients"
               :key="i"
@@ -344,7 +352,11 @@ function log(...x: any) {
           @click="generateFarmingMaterialList()"
           >Generate</v-btn
         >
-        <h1 class="my-1">Materials</h1>
+        <div class="mt-2 mb-1 flex flex-row items-center">
+          <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+          <h1 class="uppercase">Materials</h1>
+          <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+        </div>
         <v-card
           v-for="material in materialFarmingList.filter(
             (v) => v.item.type === 'materials'
@@ -359,7 +371,11 @@ function log(...x: any) {
             </v-checkbox-btn>
           </div>
         </v-card>
-        <h1 class="my-1">Ingredients</h1>
+        <div class="mt-2 mb-1 flex flex-row items-center">
+          <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+          <h1 class="uppercase">Ingredients</h1>
+          <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
+        </div>
         <v-card
           v-for="material in materialFarmingList.filter(
             (v) => v.item.type === 'ingredients'

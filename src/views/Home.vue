@@ -108,7 +108,7 @@ function addItemToList(item: CraftingItem) {
       item.ingredients = item.ingredients?.sort((a, b) =>
         a.viewValue.localeCompare(b.viewValue)
       );
-      console.log("[ITEM TO SORT:], ", item);
+
       return item;
     });
   }

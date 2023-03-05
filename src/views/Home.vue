@@ -100,7 +100,6 @@ function addItemToList(item: CraftingItem) {
           foundMat.quantity = ingredient.quantity * _craft;
           foundMat.raw = ingredient.quantity * craftsAmount;
         }
-        foundMat["PENIS"] = "FOUNT MAT PENIS";
 
         addItemOrUpdate(itemIngredients, ingredient, "ingredients");
 
@@ -129,7 +128,6 @@ function addItemToList(item: CraftingItem) {
 
       return item;
     });
-    console.log(finalItem);
   }
 
   changes.value = true;

@@ -129,7 +129,7 @@ function recursiveMaterialSet(
         );
       }
     }
-    /* console.log(newObj); */
+
     Object.assign(newObj, { ...ingredient, ...matching });
 
     item.ingredients[index] = newObj as any;

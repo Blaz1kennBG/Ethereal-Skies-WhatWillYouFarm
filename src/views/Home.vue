@@ -1,15 +1,21 @@
 <script lang="ts" setup>
 import ListGroupActivator from "@/components/ListGroupActivator.vue";
 import { ref, onMounted } from "vue";
-import { database, FarmingMaterial } from "../shared/db";
+import { database, FarmingMaterial, Material } from "../shared/db";
 import { CraftingItem } from "../shared/db";
 import { cloneDeep } from "lodash-es";
 import Header from "@/layouts/default/Header.vue";
+interface SelectedItem {
+  quantity: number;
+  item: CraftingItem;
+  materials?: Material[];
+  ingredients?: Material[];
+}
 const searchInput = ref("");
 let validForm = false;
 const compact = ref(false);
 const foundItems = ref([] as CraftingItem[]);
-const farmingList = ref([] as { quantity: number; item: CraftingItem }[]);
+const farmingList = ref([] as SelectedItem[]);
 const materialFarmingList = ref([] as FarmingMaterial[]);
 const changes = ref(false);
 const items = database.getAllItems();
@@ -30,40 +36,112 @@ function addItemToList(item: CraftingItem) {
     updateExisting(exists);
   } else {
     const _item = cloneDeep(item);
+    const itemMaterial = [] as any[];
+    const itemIngredients = [] as any[];
     _item.materials.forEach((material) => {
-      const craftsAmount = Math.ceil(
-        material.quantity / material.craftable_amount
-      );
+      const craftsAmount = material.craftable_amount
+        ? Math.ceil(material.quantity / material.craftable_amount)
+        : 1;
 
       material.ingredients.map((ingredient) => {
+        const recursiveSetMaterials = (data: Material) => {
+          const material_craft_amount = data.craftable_amount
+            ? Math.ceil(data.quantity / data.craftable_amount)
+            : 1;
+          if (!data.quantity || !data.raw) {
+            /*  console.log("bad values: ", data.quantity, data.raw, data); */
+          }
+          if (data.quantity && data.raw) {
+            data.quantity = data.raw * material_craft_amount;
+            data.raw = data.raw * material_craft_amount;
+          }
+
+          data.ingredients.map((mat) => {
+            const result = recursiveSetMaterials(mat);
+            return {
+              ...result,
+            };
+          });
+          let ingredientInList = itemIngredients.find(
+            (i) => i.name === data.name && i.type === "ingredients"
+          );
+          if (ingredientInList) {
+            ingredientInList += data.quantity;
+          } else {
+            if (data.type === "ingredients") itemIngredients.push(data);
+          }
+          return data;
+        };
+
+        if (ingredient.ingredients?.length) {
+          recursiveSetMaterials(ingredient);
+        }
         ingredient.quantity = ingredient.raw * craftsAmount;
+        ingredient.raw = ingredient.raw * craftsAmount;
+        const foundMat = _item.materials.find(
+          (v) => v.name === ingredient.name
+        ) as any;
+
+        foundMat.quantity = ingredient.quantity;
+        foundMat.raw = ingredient.quantity;
+        addItemOrUpdate(itemIngredients, ingredient, "ingredients");
+
         return {
           ...ingredient,
         };
       });
+      addItemOrUpdate(itemMaterial, material, "materials");
     });
-    farmingList.value.push({ quantity: 1, item: _item });
+
+    const finalItem = {
+      quantity: 1,
+      item: _item,
+      materials: itemMaterial,
+      ingredients: itemIngredients,
+    };
+
+    farmingList.value.push(finalItem);
+    farmingList.value.map((item) => {
+      item.materials = item.materials?.sort((a, b) =>
+        a.viewValue.localeCompare(b.viewValue)
+      );
+      item.ingredients = item.ingredients?.sort((a, b) =>
+        a.viewValue.localeCompare(b.viewValue)
+      );
+      console.log("[ITEM TO SORT:], ", item);
+      return item;
+    });
   }
-  console.log();
+
   changes.value = true;
 }
-function updateExisting(selectedItem: {
-  quantity: number;
-  item: CraftingItem;
-}) {
+function addItemOrUpdate(target: any[], source: any, type: string) {
+  let exists = target.find((v) => v.name === source.name && v.type === type);
+  if (exists) {
+    exists.quantity += source.quantity;
+    exists.raw += source.raw;
+  } else {
+    if (source.type === type) target.push(source);
+  }
+}
+function updateExisting(selectedItem: SelectedItem) {
   selectedItem.quantity++;
-  selectedItem.item.materials.forEach((material) => {
+  selectedItem.materials?.map((material) => {
     material.quantity = material.raw * selectedItem.quantity;
-    const craftsAmount = Math.ceil(
-      material.quantity / material.craftable_amount
-    );
-    material.ingredients.map((ingredient) => {
-      ingredient.quantity = ingredient.raw * craftsAmount;
-      return {
-        ...ingredient,
-      };
-    });
+
+    return material;
   });
+  selectedItem.materials = selectedItem.materials?.sort((a, b) =>
+    a.viewValue.localeCompare(b.viewValue)
+  );
+  selectedItem.ingredients?.map((ingredient) => {
+    ingredient.quantity = ingredient.raw * selectedItem.quantity;
+
+    return ingredient;
+  });
+  selectedItem.ingredients = selectedItem.ingredients?.sort((a, b) =>
+    a.viewValue.localeCompare(b.viewValue)
+  );
 }
 function addMaterialsToList(newItem: FarmingMaterial) {
   const exists = materialFarmingList.value.find(
@@ -78,24 +156,24 @@ function addMaterialsToList(newItem: FarmingMaterial) {
 }
 function generateFarmingMaterialList() {
   materialFarmingList.value = [];
-  farmingList.value.forEach(({ item }) => {
-    item.materials.forEach((material) => {
-      addMaterialsToList({
-        quantity: material.quantity,
-        item: material,
-        checked: false,
-      });
-      material.ingredients.forEach((ingredient) => {
-        addMaterialsToList({
-          quantity: ingredient.quantity,
-          item: ingredient,
-          checked: false,
-        });
-      });
-    });
+  farmingList.value.forEach((item) => {
+    item.ingredients
+      ?.sort((a, b) => a.viewValue.localeCompare(b.viewValue))
+      .forEach((ingredient) =>
+        addMaterialsToList({ quantity: ingredient.quantity, item: ingredient })
+      );
+
+    item.materials
+      ?.sort((a, b) => a.viewValue.localeCompare(b.viewValue))
+      .forEach((material) =>
+        addMaterialsToList({ quantity: material.quantity, item: material })
+      );
   });
+  materialFarmingList.value = materialFarmingList.value.sort((a, b) =>
+    a.item.viewValue.localeCompare(b.item.viewValue)
+  );
 }
-function removeItem(selectedItem: { quantity: number; item: CraftingItem }) {
+function removeItem(selectedItem: SelectedItem) {
   const index = farmingList.value.findIndex(
     (v) => v.item.name === selectedItem.item.name
   );
@@ -187,58 +265,30 @@ function log(...x: any) {
                 </template>
               </list-group-activator>
             </template>
+            <h1 class="ml-2">Materials</h1>
+            <template v-for="(material, i) in farmingItem.materials" :key="i">
+              <v-card>
+                <div class="flex flex-row items-center">
+                  <v-checkbox-btn
+                    :label="`${material.viewValue} (${material.quantity})`"
+                  >
+                  </v-checkbox-btn>
+                </div>
+              </v-card>
+            </template>
+            <h1 class="ml-2">Ingredients</h1>
             <template
-              v-for="(material, i) in farmingItem.item.materials"
+              v-for="(ingredient, i) in farmingItem.ingredients"
               :key="i"
             >
-              <v-list-group v-if="material.ingredients.length">
-                <template v-slot:activator="{ props, isOpen }">
-                  <list-group-activator
-                    class="px-8"
-                    :title="`${material.viewValue} (${material.quantity})`"
-                    :item-type="material.type"
-                    :description="
-                      material.description || 'Missing item description'
-                    "
-                    :props="props"
-                    :isOpen="isOpen"
-                  />
-                </template>
-
-                <v-list-item
-                  class="!p-0"
-                  v-for="(itemMats, itmI) in material.ingredients"
-                  v-bind:key="itmI"
-                >
-                  <v-checkbox
-                    :label="itemMats.viewValue + ` (${itemMats.quantity})`"
-                  ></v-checkbox>
-
-                  <v-tooltip
-                    open-delay="400"
-                    content-class="!bg-neutral-300"
-                    activator="parent"
-                    location="end"
-                    >{{
-                      itemMats.description || "Missing description"
-                    }}</v-tooltip
+              <v-card>
+                <div class="flex flex-row items-center">
+                  <v-checkbox-btn
+                    :label="`${ingredient.viewValue} (${ingredient.quantity})`"
                   >
-                </v-list-item>
-              </v-list-group>
-              <v-list-item v-else class="!p-0" v-bind:key="i">
-                <v-checkbox
-                  :label="material.viewValue + ` (${material.quantity})`"
-                ></v-checkbox>
-                <v-tooltip
-                  open-delay="400"
-                  content-class="!bg-neutral-300"
-                  activator="parent"
-                  location="end"
-                  >{{
-                    material.description || "Missing description"
-                  }}</v-tooltip
-                >
-              </v-list-item>
+                  </v-checkbox-btn>
+                </div>
+              </v-card>
             </template>
           </v-list-group>
         </v-list>
@@ -287,7 +337,6 @@ function log(...x: any) {
           <div class="flex flex-row items-center">
             <v-checkbox-btn
               :label="`${material.item.viewValue} (${material.quantity})`"
-              v-model="material.checked"
               @click="log(material)"
             >
             </v-checkbox-btn>
@@ -303,7 +352,6 @@ function log(...x: any) {
           <div class="flex flex-row items-center">
             <v-checkbox-btn
               :label="`${material.item.viewValue} (${material.quantity})`"
-              v-model="material.checked"
               @click="log(material)"
             >
             </v-checkbox-btn>

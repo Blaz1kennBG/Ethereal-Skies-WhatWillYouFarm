@@ -3,6 +3,102 @@
     {
       "icon": "game-icons:chest-armor",
       "type": "armor",
+      "viewValue": "Carnelian Chestplate",
+      "name": "carnelian_chestplate",
+      "requirements": {
+        "level": 32,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "worn_fabric",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "worn_leather",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "refined_carnelian",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 12,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Carnelian Leggings",
+      "name": "carnelian_leggings",
+      "requirements": {
+        "level": 29,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "worn_fabric",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "worn_leather",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "refined_carnelian",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 12,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Carnelian Boots",
+      "name": "carnelian_boots",
+      "requirements": {
+        "level": 26,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "worn_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "worn_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_carnelian",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 12,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
       "viewValue": "Carnelian Helmet",
       "name": "carnelian_helmet",
       "requirements": {
@@ -21,14 +117,14 @@
           "quantity": 3
         },
         {
-          "name": "refined_bone",
+          "name": "refined_carnelian",
           "raw": 6,
           "quantity": 6
         },
         {
           "name": "magic_crystal",
-          "raw": 6,
-          "quantity": 6
+          "raw": 12,
+          "quantity": 12
         }
       ]
     },
@@ -59,8 +155,8 @@
         },
         {
           "name": "magic_crystal",
-          "raw": 6,
-          "quantity": 6
+          "raw": 12,
+          "quantity": 12
         }
       ]
     },
@@ -123,8 +219,8 @@
         },
         {
           "name": "magic_crystal",
-          "raw": 6,
-          "quantity": 6
+          "raw": 12,
+          "quantity": 12
         }
       ]
     },
@@ -585,6 +681,315 @@
       ]
     }
   ],
+  "items": [
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Worn Pelt",
+      "name": "worn_pelt",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Worn Cloth of Scrap",
+      "name": "worn_cloth_of_scrap",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Raw Carnelian",
+      "name": "raw_carnelian",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Plant Fiber",
+      "name": "plant_fiber",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Tattered Cloth Scrap",
+      "name": "tattered_cloth_scrap",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Spools of Thread",
+      "name": "spools_of_thread",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Tattered Pelt",
+      "name": "tattered_pelt",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Monster Blood",
+      "name": "monster_blood",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Raw Bone",
+      "name": "raw_bone",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Shiny Stone",
+      "name": "shiny_stone",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Sturdy Stick",
+      "name": "sturdy_stick",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Rotten Log",
+      "name": "rotten_log",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Ancient Roots",
+      "name": "ancient_roots",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Raw Iron",
+      "name": "raw_iron",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Worn Leather",
+      "name": "worn_leather",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "worn_pelt",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "monster_blood",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "tattered_leather",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Worn Fabric",
+      "name": "worn_fabric",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "worn_cloth_of_scrap",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "spools_of_thread",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "tattered_fabric",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 8,
+      "type": "materials",
+      "viewValue": "Refined Carnelian",
+      "name": "refined_carnelian",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "raw_carnelian",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "refined_bone",
+          "raw": 8,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Tattered Fabric",
+      "name": "tattered_fabric",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "tattered_cloth_scrap",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "spools_of_thread",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Tattered Leather",
+      "description": "materials_description",
+      "name": "tattered_leather",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "tattered_pelt",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "monster_blood",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 4,
+      "type": "materials",
+      "viewValue": "Refined Iron",
+      "description": "materials_description",
+      "name": "refined_iron",
+      "ingredients": [
+        {
+          "name": "raw_iron",
+          "raw": 32,
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "craftable_amount": 8,
+      "type": "materials",
+      "viewValue": "Refined Bone",
+      "description": "materials_description",
+      "name": "refined_bone",
+      "ingredients": [
+        {
+          "name": "raw_bone",
+          "raw": 32,
+          "quantity": 32
+        },
+        {
+          "name": "shiny_stone",
+          "raw": 16,
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "type": "materials",
+      "viewValue": "Magic Crystal",
+      "description": "materials_description",
+      "name": "magic_crystal",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Rotten Plank",
+      "name": "rotten_plank",
+      "description": "Ingredient Description",
+      "ingredients": [
+        {
+          "type": "materials",
+          "viewValue": "Sturdy Stick",
+          "name": "sturdy_stick",
+          "quantity": 8,
+          "raw": 8
+        },
+        {
+          "type": "materials",
+          "viewValue": "Rotten Log",
+          "name": "rotten_log",
+          "quantity": 16,
+          "raw": 16
+        },
+        {
+          "type": "materials",
+          "viewValue": "Ancient Roots",
+          "name": "ancient_roots",
+          "quantity": 8,
+          "raw": 8
+        }
+      ]
+    }
+  ],
   "tool": [
     {
       "icon": "mdi:pickaxe",
@@ -795,307 +1200,5 @@
       ]
     }
   ],
-  "materials": [
-    {
-      "craftable_amount": 6,
-      "type": "materials",
-      "viewValue": "Worn Leather",
-      "name": "worn_leather",
-      "description": "materials_description",
-      "ingredients": [
-        {
-          "name": "plant_fiber",
-          "raw": 16,
-          "quantity": 16
-        },
-        {
-          "name": "worn_pelt",
-          "raw": 4,
-          "quantity": 4
-        },
-        {
-          "name": "monster_blood",
-          "raw": 4,
-          "quantity": 4
-        },
-        {
-          "name": "tattered_leather",
-          "raw": 4,
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "craftable_amount": 6,
-      "type": "materials",
-      "viewValue": "Worn Fabric",
-      "name": "worn_fabric",
-      "description": "materials_description",
-      "ingredients": [
-        {
-          "name": "plant_fiber",
-          "raw": 16,
-          "quantity": 16
-        },
-        {
-          "name": "worn_cloth_of_scrap",
-          "raw": 8,
-          "quantity": 8
-        },
-        {
-          "name": "spools_of_thread",
-          "raw": 4,
-          "quantity": 4
-        },
-        {
-          "name": "tattered_fabric",
-          "raw": 4,
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "craftable_amount": 8,
-      "type": "materials",
-      "viewValue": "Refined Carnelian",
-      "name": "refined_carnelian",
-      "description": "materials_description",
-      "ingredients": [
-        {
-          "name": "raw_carnelian",
-          "raw": 16,
-          "quantity": 16
-        },
-        {
-          "name": "refined_bone",
-          "raw": 8,
-          "quantity": 8
-        }
-      ]
-    },
-    {
-      "craftable_amount": 6,
-      "type": "materials",
-      "viewValue": "Tattered Fabric",
-      "name": "tattered_fabric",
-      "description": "materials_description",
-      "ingredients": [
-        {
-          "name": "plant_fiber",
-          "raw": 16,
-          "quantity": 16
-        },
-        {
-          "name": "tattered_cloth_scrap",
-          "raw": 8,
-          "quantity": 8
-        },
-        {
-          "name": "spools_of_thread",
-          "raw": 4,
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "craftable_amount": 6,
-      "type": "materials",
-      "viewValue": "Tattered Leather",
-      "description": "materials_description",
-      "name": "tattered_leather",
-      "ingredients": [
-        {
-          "name": "plant_fiber",
-          "raw": 16,
-          "quantity": 16
-        },
-        {
-          "name": "tattered_pelt",
-          "raw": 8,
-          "quantity": 8
-        },
-        {
-          "name": "monster_blood",
-          "raw": 4,
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "craftable_amount": 4,
-      "type": "materials",
-      "viewValue": "Refined Iron",
-      "description": "materials_description",
-      "name": "refined_iron",
-      "ingredients": [
-        {
-          "name": "raw_iron",
-          "raw": 32,
-          "quantity": 32
-        }
-      ]
-    },
-    {
-      "craftable_amount": 8,
-      "type": "materials",
-      "viewValue": "Refined Bone",
-      "description": "materials_description",
-      "name": "refined_bone",
-      "ingredients": [
-        {
-          "name": "raw_bone",
-          "raw": 32,
-          "quantity": 32
-        },
-        {
-          "name": "shiny_stone",
-          "raw": 16,
-          "quantity": 16
-        }
-      ]
-    },
-    {
-      "type": "materials",
-      "viewValue": "Magic Crystal",
-      "description": "materials_description",
-      "name": "magic_crystal",
-      "ingredients": []
-    },
-    {
-      "craftable_amount": 6,
-      "type": "materials",
-      "viewValue": "Rotten Plank",
-      "name": "rotten_plank",
-      "description": "Ingredient Description",
-      "ingredients": [
-        {
-          "type": "materials",
-          "viewValue": "Sturdy Stick",
-          "name": "sturdy_stick",
-          "quantity": 8,
-          "raw": 8
-        },
-        {
-          "type": "materials",
-          "viewValue": "Rotten Log",
-          "name": "rotten_log",
-          "quantity": 16,
-          "raw": 16
-        },
-        {
-          "type": "materials",
-          "viewValue": "Ancient Roots",
-          "name": "ancient_roots",
-          "quantity": 8,
-          "raw": 8
-        }
-      ]
-    }
-  ],
-  "ingredients": {
-    "worn_pelt": {
-      "type": "ingredients",
-      "viewValue": "Worn Pelt",
-      "name": "worn_pelt",
-      "description": "Ingredient Description"
-    },
-
-    "worn_cloth_of_scrap": {
-      "type": "ingredients",
-      "viewValue": "Worn Cloth of Scrap",
-      "name": "worn_cloth_of_scrap",
-      "description": "Ingredient Description"
-    },
-    "raw_carnelian": {
-      "type": "ingredients",
-      "viewValue": "Raw Carnelian",
-      "name": "raw_carnelian",
-      "description": "Ingredient Description"
-    },
-    "plant_fiber": {
-      "type": "ingredients",
-      "viewValue": "Plant Fiber",
-      "name": "plant_fiber",
-      "description": "Ingredient Description"
-    },
-    "tattered_cloth_scrap": {
-      "type": "ingredients",
-      "viewValue": "Tattered Cloth Scrap",
-      "name": "tattered_cloth_scrap",
-      "description": "Ingredient Description"
-    },
-    "spools_of_thread": {
-      "type": "ingredients",
-      "viewValue": "Spools of Thread",
-      "name": "spools_of_thread",
-      "description": "Ingredient Description"
-    },
-    "tattered_pelt": {
-      "type": "ingredients",
-      "viewValue": "Tattered Pelt",
-      "name": "tattered_pelt",
-      "description": "Ingredient Description"
-    },
-    "monster_blood": {
-      "type": "ingredients",
-      "viewValue": "Monster Blood",
-      "name": "monster_blood",
-      "description": "Ingredient Description"
-    },
-    "raw_bone": {
-      "type": "ingredients",
-      "viewValue": "Raw Bone",
-      "name": "raw_bone",
-      "description": "Ingredient Description"
-    },
-    "shiny_stone": {
-      "type": "ingredients",
-      "viewValue": "Shiny Stone",
-      "name": "shiny_stone",
-      "description": "Ingredient Description"
-    },
-    "sturdy_stick": {
-      "type": "ingredients",
-      "viewValue": "Sturdy Stick",
-      "name": "sturdy_stick",
-      "description": "Ingredient Description"
-    },
-    "rotten_log": {
-      "type": "ingredients",
-      "viewValue": "Rotten Log",
-      "name": "rotten_log",
-      "description": "Ingredient Description"
-    },
-    "ancient_roots": {
-      "type": "ingredients",
-      "viewValue": "Ancient Roots",
-      "name": "ancient_roots",
-      "description": "Ingredient Description"
-    },
-    "raw_iron": {
-      "type": "ingredients",
-      "viewValue": "Raw Iron",
-      "name": "raw_iron",
-      "description": "Ingredient Description"
-    }
-  },
-  "fill_with": [
-    {
-      "category": "armor",
-      "with": "material"
-    },
-    {
-      "category": "weapon",
-      "with": "material"
-    },
-    {
-      "category": "accessory",
-      "with": "material"
-    },
-    {
-      "category": "tool",
-      "with": "material"
-    }
-  ],
-  "searchable": ["armor", "weapon", "accessory", "tool"]
+  "fillables": ["armor", "weapon", "tool", "accessory"]
 }

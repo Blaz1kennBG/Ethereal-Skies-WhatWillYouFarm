@@ -43,19 +43,26 @@ function addItemToList(item: CraftingItem) {
         ? Math.ceil(material.quantity / material.craftable_amount)
         : 1;
 
-      material.ingredients.map((ingredient) => {
+      material.ingredients.map((ingredient, ingredientIndex) => {
         const recursiveSetMaterials = (data: Material) => {
-          const material_craft_amount = data.craftable_amount
+          let material_craft_amount;
+
+          material_craft_amount = data.craftable_amount
             ? Math.ceil(data.quantity / data.craftable_amount)
             : 1;
+          let main_craft_amount = Math.ceil(
+            ingredient.quantity / ingredient.craftable_amount
+          );
           if (!data.quantity || !data.raw) {
-            /*  console.log("bad values: ", data.quantity, data.raw, data); */
+            /*  data.raw = ingredient.raw * main_craft_amount;
+            data.quantity = ingredient.raw * main_craft_amount; */
           }
           if (data.quantity && data.raw) {
+            // If the ingredient has quantity and raw
             data.quantity = data.raw * material_craft_amount;
             data.raw = data.raw * material_craft_amount;
           }
-
+          // console.log(`Item: `, data, `Crafts: ${material_craft_amount}`);
           data.ingredients.map((mat) => {
             const result = recursiveSetMaterials(mat);
             return {
@@ -70,6 +77,7 @@ function addItemToList(item: CraftingItem) {
           } else {
             if (data.type === "ingredients") itemIngredients.push(data);
           }
+
           return data;
         };
 
@@ -78,12 +86,22 @@ function addItemToList(item: CraftingItem) {
         }
         ingredient.quantity = ingredient.raw * craftsAmount;
         ingredient.raw = ingredient.raw * craftsAmount;
+
         const foundMat = _item.materials.find(
           (v) => v.name === ingredient.name
         ) as any;
+        const _craft = Math.ceil(
+          ingredient.quantity / ingredient.craftable_amount
+        );
+        if (foundMat.quantity < foundMat.craftable_amount) {
+          foundMat.quantity = _craft * foundMat.craftable_amount;
+          foundMat.raw = _craft * foundMat.craftable_amount;
+        } else {
+          foundMat.quantity = ingredient.quantity * _craft;
+          foundMat.raw = ingredient.quantity * craftsAmount;
+        }
+        foundMat["PENIS"] = "FOUNT MAT PENIS";
 
-        foundMat.quantity = ingredient.quantity;
-        foundMat.raw = ingredient.quantity;
         addItemOrUpdate(itemIngredients, ingredient, "ingredients");
 
         return {
@@ -111,6 +129,7 @@ function addItemToList(item: CraftingItem) {
 
       return item;
     });
+    console.log(finalItem);
   }
 
   changes.value = true;

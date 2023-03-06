@@ -38,7 +38,7 @@ function addItemToList(item: CraftingItem) {
     const _item = cloneDeep(item);
     const itemMaterial = [] as any[];
     const itemIngredients = [] as any[];
-    _item.materials.forEach((material) => {
+    _item.materials.map((material, materialIndex) => {
       const craftsAmount = material.craftable_amount
         ? Math.ceil(material.quantity / material.craftable_amount)
         : 1;
@@ -108,6 +108,26 @@ function addItemToList(item: CraftingItem) {
         };
       });
       addItemOrUpdate(itemMaterial, material, "materials");
+      if (material.type === "materials" && material.craftable_amount) {
+        const craftable_amount_material = Math.ceil(
+          material.quantity / material.craftable_amount
+        );
+        material.quantity =
+          material.craftable_amount * craftable_amount_material;
+        material.raw = material.craftable_amount * craftable_amount_material;
+
+        /*      console.log(
+          _item.materials[materialIndex] === material,
+          material.name,
+          `Crafts: ${craftable_amount_material}, quantity: ${
+            material.quantity
+          }, needs to be ${
+            craftable_amount_material * material.craftable_amount
+          }`,
+          material
+        ); */
+      }
+      return material;
     });
 
     const finalItem = {

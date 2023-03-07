@@ -3,6 +3,70 @@
     {
       "icon": "game-icons:chest-armor",
       "type": "armor",
+      "viewValue": "Ruby Helmet",
+      "name": "ruby_helmet",
+      "requirements": {
+        "level": 63,
+        "coins": 725
+      },
+      "materials": [
+        {
+          "name": "soft_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "soft_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_ruby",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 24,
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Morganite Helmet",
+      "name": "morganite_helmet",
+      "requirements": {
+        "level": 23,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "rough_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "rough_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 16,
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
       "viewValue": "Carnelian Chestplate",
       "name": "carnelian_chestplate",
       "requirements": {
@@ -96,6 +160,7 @@
         }
       ]
     },
+
     {
       "icon": "game-icons:chest-armor",
       "type": "armor",
@@ -1063,6 +1128,38 @@
     {
       "craftable_amount": null,
       "type": "ingredients",
+      "viewValue": "Raw Ruby",
+      "description": "ingredients_description",
+      "name": "raw_ruby",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Soft Cloth Scrap",
+      "description": "ingredients_description",
+      "name": "soft_cloth_scrap",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Soft Pelt",
+      "description": "ingredients_description",
+      "name": "soft_pelt",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Raw Morganite",
+      "description": "ingredients_description",
+      "name": "raw_morganite",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
       "viewValue": "Raw Gold",
       "description": "ingredients_description",
       "name": "raw_gold",
@@ -1140,6 +1237,23 @@
       "description": "Ingredient Description",
       "ingredients": []
     },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Rough Cloth Scrap",
+      "name": "rough_cloth_scrap",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Rough Pelt",
+      "name": "rough_pelt",
+      "description": "Ingredient Description",
+      "ingredients": []
+    },
+
     {
       "craftable_amount": null,
       "type": "ingredients",
@@ -1268,6 +1382,7 @@
         }
       ]
     },
+
     {
       "craftable_amount": 4,
       "type": "materials",
@@ -1363,8 +1478,104 @@
         },
         {
           "name": "refined_bone",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 8,
+      "type": "materials",
+      "viewValue": "Refined Ruby",
+      "name": "refined_ruby",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "raw_ruby",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 8,
+      "type": "materials",
+      "viewValue": "Refined Morganite",
+      "name": "refined_morganite",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "raw_morganite",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "refined_carnelian",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Soft Fabric",
+      "name": "soft_fabric",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "soft_cloth_scrap",
           "raw": 8,
           "quantity": 8
+        },
+        {
+          "name": "spools_of_thread",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "rough_fabric",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Rough Fabric",
+      "name": "rough_fabric",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "rough_cloth_scrap",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "spools_of_thread",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "worn_fabric",
+          "raw": 4,
+          "quantity": 4
         }
       ]
     },
@@ -1392,6 +1603,64 @@
         },
         {
           "name": "tattered_fabric",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Soft Leather",
+      "name": "soft_leather",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "soft_pelt",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "monster_blood",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "rough_leather",
+          "raw": 4,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Rough Leather",
+      "name": "rough_leather",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "plant_fiber",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "rough_pelt",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "monster_blood",
+          "raw": 4,
+          "quantity": 4
+        },
+        {
+          "name": "worn_leather",
           "raw": 4,
           "quantity": 4
         }

@@ -83,7 +83,7 @@ export const database = {
     return _new as CraftingItem[];
   },
 };
-
+export const dataItems = dataJson;
 function recursiveMaterialSet(
   data: Material,
   categoryItem: CraftingItem,

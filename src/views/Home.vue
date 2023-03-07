@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ListGroupActivator from "@/components/ListGroupActivator.vue";
 import { ref, onMounted } from "vue";
-import { database, FarmingMaterial, Material } from "../shared/db";
+import { database, dataItems, FarmingMaterial, Material } from "../shared/db";
 import { CraftingItem } from "../shared/db";
 import { cloneDeep } from "lodash-es";
 import Header from "@/layouts/default/Header.vue";
@@ -47,22 +47,23 @@ function addItemToList(item: CraftingItem) {
         const recursiveSetMaterials = (data: Material) => {
           let material_craft_amount;
 
-          material_craft_amount = data.craftable_amount
-            ? Math.ceil(data.quantity / data.craftable_amount)
-            : 1;
-          let main_craft_amount = Math.ceil(
-            ingredient.quantity / ingredient.craftable_amount
-          );
+          material_craft_amount =
+            data.craftable_amount && data.quantity
+              ? Math.ceil(data.quantity / data.craftable_amount)
+              : 1;
+
           if (!data.quantity || !data.raw) {
-            /*  data.raw = ingredient.raw * main_craft_amount;
-            data.quantity = ingredient.raw * main_craft_amount; */
+            // Keeping this condition in case.
+            // Something goes wrong, meaning everytime.
           }
           if (data.quantity && data.raw) {
             // If the ingredient has quantity and raw
-            data.quantity = data.raw * material_craft_amount;
-            data.raw = data.raw * material_craft_amount;
+            // To remove comment
+            /*  data.quantity = data.raw * material_craft_amount;
+            data.raw = data.raw * material_craft_amount; */
           }
           // console.log(`Item: `, data, `Crafts: ${material_craft_amount}`);
+
           data.ingredients.map((mat) => {
             const result = recursiveSetMaterials(mat);
             return {
@@ -73,7 +74,13 @@ function addItemToList(item: CraftingItem) {
             (i) => i.name === data.name && i.type === "ingredients"
           );
           if (ingredientInList) {
-            ingredientInList += data.quantity;
+            //  console.log("-----------------");
+            //  console.log("Before: ", cloneDeep(ingredientInList));
+            // To remove comment
+            ingredientInList.quantity += data.quantity;
+            ingredientInList.raw += data.quantity;
+            //  console.log("After: ", cloneDeep(ingredientInList));
+            //  console.log("-----------------");
           } else {
             if (data.type === "ingredients") itemIngredients.push(data);
           }
@@ -90,11 +97,11 @@ function addItemToList(item: CraftingItem) {
         const foundMat = _item.materials.find(
           (v) => v.name === ingredient.name
         ) as any;
-        const _craft = Math.ceil(
-          ingredient.quantity / ingredient.craftable_amount
-        );
+        const _craft = Math.ceil(foundMat.quantity / foundMat.craftable_amount);
         if (foundMat.quantity < foundMat.craftable_amount) {
+          console.log(cloneDeep(foundMat), _craft);
           foundMat.quantity = _craft * foundMat.craftable_amount;
+
           foundMat.raw = _craft * foundMat.craftable_amount;
         } else {
           foundMat.quantity = ingredient.quantity * _craft;
@@ -112,21 +119,12 @@ function addItemToList(item: CraftingItem) {
         const craftable_amount_material = Math.ceil(
           material.quantity / material.craftable_amount
         );
+
         material.quantity =
           material.craftable_amount * craftable_amount_material;
         material.raw = material.craftable_amount * craftable_amount_material;
-
-        /*      console.log(
-          _item.materials[materialIndex] === material,
-          material.name,
-          `Crafts: ${craftable_amount_material}, quantity: ${
-            material.quantity
-          }, needs to be ${
-            craftable_amount_material * material.craftable_amount
-          }`,
-          material
-        ); */
       }
+
       return material;
     });
 

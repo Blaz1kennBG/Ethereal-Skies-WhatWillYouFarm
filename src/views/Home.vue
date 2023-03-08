@@ -99,7 +99,6 @@ function addItemToList(item: CraftingItem) {
         ) as any;
         const _craft = Math.ceil(foundMat.quantity / foundMat.craftable_amount);
         if (foundMat.quantity < foundMat.craftable_amount) {
-          console.log(cloneDeep(foundMat), _craft);
           foundMat.quantity = _craft * foundMat.craftable_amount;
 
           foundMat.raw = _craft * foundMat.craftable_amount;
@@ -384,7 +383,6 @@ function log(...x: any) {
           <div class="flex flex-row items-center">
             <v-checkbox-btn
               :label="`${material.item.viewValue} (${material.quantity})`"
-              @click="log(material)"
             >
             </v-checkbox-btn>
           </div>
@@ -403,7 +401,6 @@ function log(...x: any) {
           <div class="flex flex-row items-center">
             <v-checkbox-btn
               :label="`${material.item.viewValue} (${material.quantity})`"
-              @click="log(material)"
             >
             </v-checkbox-btn>
           </div>

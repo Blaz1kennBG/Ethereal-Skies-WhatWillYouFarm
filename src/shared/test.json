@@ -35,11 +35,75 @@
     {
       "icon": "game-icons:chest-armor",
       "type": "armor",
-      "viewValue": "Morganite Helmet",
-      "name": "morganite_helmet",
+      "viewValue": "Morganite Chestplate",
+      "name": "morganite_chestplate",
       "requirements": {
-        "level": 23,
-        "coins": 125
+        "level": 52,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "rough_fabric",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "rough_leather",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Morganite Leggings",
+      "name": "morganite_leggings",
+      "requirements": {
+        "level": 49,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "rough_fabric",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "rough_leather",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Morganite Boots",
+      "name": "morganite_boots",
+      "requirements": {
+        "level": 46,
+        "coins": 375
       },
       "materials": [
         {
@@ -59,8 +123,40 @@
         },
         {
           "name": "magic_crystal",
-          "raw": 16,
-          "quantity": 16
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "game-icons:chest-armor",
+      "type": "armor",
+      "viewValue": "Morganite Helmet",
+      "name": "morganite_helmet",
+      "requirements": {
+        "level": 43,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "rough_fabric",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "rough_leather",
+          "raw": 3,
+          "quantity": 3
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 6,
+          "quantity": 6
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
         }
       ]
     },
@@ -2061,6 +2157,28 @@
           "name": "refined_gold",
           "raw": 12,
           "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 12,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "icon": "maki:jewelry-store",
+      "type": "accessory",
+      "viewValue": "Gold Necklace",
+      "name": "gold_necklace",
+      "requirements": {
+        "level": 33,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "refined_gold",
+          "raw": 15,
+          "quantity": 15
         },
         {
           "name": "magic_crystal",

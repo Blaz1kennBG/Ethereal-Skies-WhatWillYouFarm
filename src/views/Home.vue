@@ -361,7 +361,7 @@ function log(...x: any) {
         md="4"
         class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
-        <v-expansion-panels>
+        <v-expansion-panels class="mb-5">
           <v-expansion-panel>
             <v-expansion-panel-title>
               <template v-slot:default
@@ -388,9 +388,9 @@ function log(...x: any) {
           </v-expansion-panel>
         </v-expansion-panels>
 
-        <span>All Items to farm</span>
+        <span class="text-lg">All Items to farm</span>
         <v-btn
-          class="w-full"
+          class="w-full mt-1"
           variant="flat"
           :color="changes ? 'red' : 'green'"
           @click="generateFarmingMaterialList()"

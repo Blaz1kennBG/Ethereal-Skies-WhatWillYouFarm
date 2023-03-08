@@ -361,7 +361,33 @@ function log(...x: any) {
         md="4"
         class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
-        All Items to farm
+        <v-expansion-panels>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <template v-slot:default
+                ><h1 class="text-lg font-semibold">How does it work?</h1>
+              </template>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text class="!p-0">
+              <p class="mb-5 leading-7">
+                The calculator will show you all the materials and ingredients
+                required to 100% craft the item. <br />
+                Example: If
+                <span class="underline-offset-4 underline">Bone Helmet</span>
+                requires 6
+                <span class="underline-offset-4 underline">Refined Bone</span>,
+                it will calculate the minimum craftable amount of the
+                <span class="underline-offset-4 underline">Refined Bone</span>
+                and show you that. Currently, Bones are craftable in batch of 8,
+                so if item requires 6 Bones, it will show you actual number of
+                8. Тhe Ingredients tab shows everything you need to craft all
+                the materials in the Materials tab
+              </p>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
+
+        <span>All Items to farm</span>
         <v-btn
           class="w-full"
           variant="flat"

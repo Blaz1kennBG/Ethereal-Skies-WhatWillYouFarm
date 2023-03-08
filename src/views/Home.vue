@@ -381,7 +381,8 @@ function log(...x: any) {
                 and show you that. Currently, Bones are craftable in batch of 8,
                 so if item requires 6 Bones, it will show you actual number of
                 8. Тhe Ingredients tab shows everything you need to craft all
-                the materials in the Materials tab
+                the materials in the Materials tab <br />
+                Leftover materials are expected after crafting the item.
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>

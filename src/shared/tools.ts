@@ -1,4 +1,223 @@
 export const data = [
+  // Emerald
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Emerald Pickaxe",
+    name: "emerald_pickaxe",
+    requirements: {
+      level: 60,
+      coins: 2750,
+    },
+    materials: [
+      {
+        name: "hard_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_emerald",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Emerald Shovel",
+    name: "emerald_shovel",
+    requirements: {
+      level: 60,
+      coins: 2750,
+    },
+    materials: [
+      {
+        name: "hard_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_emerald",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Emerald Axe",
+    name: "emerald_axe",
+    requirements: {
+      level: 60,
+      coins: 2750,
+    },
+    materials: [
+      {
+        name: "hard_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_emerald",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Emerald Rod",
+    name: "emerald_rod",
+    requirements: {
+      level: 60,
+      coins: 2750,
+    },
+    materials: [
+      {
+        name: "hard_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_emerald",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  // Diamond
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Diamond Pickaxe",
+    name: "diamond_pickaxe",
+    requirements: {
+      level: 45,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "coarse_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_diamond",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Diamond Shovel",
+    name: "diamond_shovel",
+    requirements: {
+      level: 45,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "coarse_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_diamond",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Diamond Axe",
+    name: "diamond_axe",
+    requirements: {
+      level: 45,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "coarse_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_diamond",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  {
+    icon: "mdi:pickaxe",
+    type: "tool",
+    viewValue: "Diamond Rod",
+    name: "diamond_rod",
+    requirements: {
+      level: 45,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "coarse_plank",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "refined_diamond",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "magic_crystal",
+        raw: 18,
+        quantity: 18,
+      },
+    ],
+  },
+  // Gold
   {
     icon: "mdi:pickaxe",
     type: "tool",
@@ -107,7 +326,7 @@ export const data = [
       },
     ],
   },
-
+  // Iron
   {
     icon: "mdi:pickaxe",
     type: "tool",

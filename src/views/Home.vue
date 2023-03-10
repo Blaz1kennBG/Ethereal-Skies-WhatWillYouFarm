@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ListGroupActivator from "@/components/ListGroupActivator.vue";
 import { ref, onMounted } from "vue";
-import { database, dataItems, FarmingMaterial, Material } from "../shared/db";
+import { database, FarmingMaterial, Material } from "../shared/db";
 import { CraftingItem } from "../shared/db";
 import { cloneDeep } from "lodash-es";
 import Header from "@/layouts/default/Header.vue";

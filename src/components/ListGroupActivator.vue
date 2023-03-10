@@ -18,7 +18,7 @@
     <slot name="label-prepend"></slot>
     <div class="ml-auto flex flex-row items-center">
       <i
-        class="mr-2"
+        class="mr-2 p-3"
         v-if="deleteAction"
         @click="$emit('delete', 'DELETE_ACTION')"
       >

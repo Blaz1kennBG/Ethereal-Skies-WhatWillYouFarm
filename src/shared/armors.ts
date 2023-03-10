@@ -2,6 +2,230 @@ export const data = [
   {
     icon: "game-icons:chest-armor",
     type: "armor",
+    viewValue: "Demonite Chestplate",
+    name: "demonite_chestplate",
+    requirements: {
+      level: 92,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "fine_fabric",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "soft_leather",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "refined_ruby",
+        raw: 12,
+        quantity: 12,
+      },
+      {
+        name: "magic_crystal",
+        raw: 30,
+        quantity: 30,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Demonite Leggings",
+    name: "demonite_leggings",
+    requirements: {
+      level: 89,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "fine_fabric",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "soft_leather",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "refined_ruby",
+        raw: 12,
+        quantity: 12,
+      },
+      {
+        name: "magic_crystal",
+        raw: 30,
+        quantity: 30,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Demonite Boots",
+    name: "demonite_boots",
+    requirements: {
+      level: 86,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "soft_fabric",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "soft_leather",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "refined_ruby",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "magic_crystal",
+        raw: 30,
+        quantity: 30,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Demonite Helmet",
+    name: "demonite_helmet",
+    requirements: {
+      level: 83,
+      coins: 1450,
+    },
+    materials: [
+      {
+        name: "fine_fabric",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "soft_leather",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "refined_ruby",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "magic_crystal",
+        raw: 30,
+        quantity: 30,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Ruby Chestplate",
+    name: "ruby_chestplate",
+    requirements: {
+      level: 72,
+      coins: 725,
+    },
+    materials: [
+      {
+        name: "soft_fabric",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "soft_leather",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "refined_ruby",
+        raw: 12,
+        quantity: 12,
+      },
+      {
+        name: "magic_crystal",
+        raw: 24,
+        quantity: 24,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Ruby Leggings",
+    name: "ruby_leggings",
+    requirements: {
+      level: 69,
+      coins: 725,
+    },
+    materials: [
+      {
+        name: "soft_fabric",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "soft_leather",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "refined_ruby",
+        raw: 12,
+        quantity: 12,
+      },
+      {
+        name: "magic_crystal",
+        raw: 24,
+        quantity: 24,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
+    viewValue: "Ruby Boots",
+    name: "ruby_boots",
+    requirements: {
+      level: 66,
+      coins: 725,
+    },
+    materials: [
+      {
+        name: "soft_fabric",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "soft_leather",
+        raw: 3,
+        quantity: 3,
+      },
+      {
+        name: "refined_ruby",
+        raw: 6,
+        quantity: 6,
+      },
+      {
+        name: "magic_crystal",
+        raw: 24,
+        quantity: 24,
+      },
+    ],
+  },
+  {
+    icon: "game-icons:chest-armor",
+    type: "armor",
     viewValue: "Ruby Helmet",
     name: "ruby_helmet",
     requirements: {

@@ -1,9 +1,9 @@
+import { match } from "assert";
 import { cloneDeep } from "lodash-es";
 import { armors } from "./armors";
 import { ingredients } from "./ingredients";
 import { accessories } from "./jewelry";
 import { materials } from "./materials";
-import dataJson from "./test.json";
 import { tools } from "./tools";
 import { weapons } from "./weapons";
 
@@ -65,10 +65,11 @@ const fill_database = () => {
     fillables: ["armor", "weapon", "tool", "accessory"],
   };
 };
-
+const database_raw = fill_database();
 export const database = {
   getAllItems() {
     const root = fill_database();
+
     root.fillables.forEach((category: any) => {
       root[category as keyof typeof root].forEach((categoryItem: any) => {
         categoryItem.materials.forEach((material: any, materialIndex: any) => {
@@ -94,13 +95,12 @@ export const database = {
       .map(([key, value]) => value)
       .flat()
       .filter(
-        (v) => typeof v === "object" && dataJson.fillables.includes(v.type)
+        (v) => typeof v === "object" && database_raw.fillables.includes(v.type)
       );
-
+    console.log(_new);
     return _new as CraftingItem[];
   },
 };
-export const dataItems = dataJson;
 function recursiveMaterialSet(
   data: Material,
   categoryItem: CraftingItem,
@@ -113,7 +113,7 @@ function recursiveMaterialSet(
       (x) => x.name === ingredient.name
     );
     const matching = cloneDeep(
-      dataJson.items.find((x) => x.name === ingredient.name)
+      database_raw.items.find((x) => x.name === ingredient.name)
     );
     if (existing) {
       existing.quantity += ingredient.quantity;
@@ -140,10 +140,12 @@ function recursiveMaterialSet(
     if (!Array.isArray(matching?.ingredients)) {
       try {
         if (matching) matching.ingredients = [matching.ingredients];
-        else throw new Error("No matching ingredients");
+        else {
+          throw new Error("No matching ingredients");
+        }
       } catch (e) {
         console.error(
-          `ERROR. Possibilities: \n 1. Item has materials listed but the the materials' ingredients are missing.`
+          `ERROR. Possibilities: \n 1. Item has materials listed but the the materials' ingredients are missing. ${matching}`
         );
       }
     }

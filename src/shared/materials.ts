@@ -2,6 +2,64 @@ export const data = [
   {
     craftable_amount: 6,
     type: "materials",
+    viewValue: "Smooth Plank",
+    name: "smooth_plank",
+    description: "materials_description",
+    ingredients: [
+      {
+        name: "sturdy_stick",
+        quantity: 8,
+        raw: 8,
+      },
+      {
+        name: "smooth_log",
+        quantity: 16,
+        raw: 16,
+      },
+      {
+        name: "ancient_roots",
+        quantity: 8,
+        raw: 8,
+      },
+      {
+        name: "hard_plank",
+        quantity: 4,
+        raw: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 6,
+    type: "materials",
+    viewValue: "Hard Plank",
+    name: "hard_plank",
+    description: "materials_description",
+    ingredients: [
+      {
+        name: "sturdy_stick",
+        quantity: 8,
+        raw: 8,
+      },
+      {
+        name: "hard_log",
+        quantity: 16,
+        raw: 16,
+      },
+      {
+        name: "ancient_roots",
+        quantity: 8,
+        raw: 8,
+      },
+      {
+        name: "coarse_plank",
+        quantity: 4,
+        raw: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 6,
+    type: "materials",
     viewValue: "Coarse Plank",
     name: "coarse_plank",
     description: "materials_description",
@@ -108,7 +166,44 @@ export const data = [
       },
     ],
   },
-
+  {
+    craftable_amount: 4,
+    type: "materials",
+    viewValue: "Refined Emerald",
+    description: "materials_description",
+    name: "refined_emerald",
+    ingredients: [
+      {
+        name: "raw_emerald",
+        raw: 16,
+        quantity: 16,
+      },
+      {
+        name: "refined_diamond",
+        raw: 4,
+        quantity: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 4,
+    type: "materials",
+    viewValue: "Refined Diamond",
+    description: "materials_description",
+    name: "refined_diamond",
+    ingredients: [
+      {
+        name: "raw_diamond",
+        raw: 16,
+        quantity: 16,
+      },
+      {
+        name: "refined_gold",
+        raw: 4,
+        quantity: 4,
+      },
+    ],
+  },
   {
     craftable_amount: 4,
     type: "materials",
@@ -212,6 +307,25 @@ export const data = [
   {
     craftable_amount: 8,
     type: "materials",
+    viewValue: "Refined Demonite",
+    name: "refined_demonite",
+    description: "materials_description",
+    ingredients: [
+      {
+        name: "raw_demonite",
+        raw: 16,
+        quantity: 16,
+      },
+      {
+        name: "refined_ruby",
+        raw: 4,
+        quantity: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 8,
+    type: "materials",
     viewValue: "Refined Ruby",
     name: "refined_ruby",
     description: "materials_description",
@@ -242,6 +356,35 @@ export const data = [
       },
       {
         name: "refined_carnelian",
+        raw: 4,
+        quantity: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 6,
+    type: "materials",
+    viewValue: "Fine Fabric",
+    name: "fine_fabric",
+    description: "materials_description",
+    ingredients: [
+      {
+        name: "plant_fiber",
+        raw: 16,
+        quantity: 16,
+      },
+      {
+        name: "fine_cloth_scrap",
+        raw: 8,
+        quantity: 8,
+      },
+      {
+        name: "spools_of_thread",
+        raw: 4,
+        quantity: 4,
+      },
+      {
+        name: "soft_fabric",
         raw: 4,
         quantity: 4,
       },
@@ -329,6 +472,35 @@ export const data = [
       },
       {
         name: "tattered_fabric",
+        raw: 4,
+        quantity: 4,
+      },
+    ],
+  },
+  {
+    craftable_amount: 6,
+    type: "materials",
+    viewValue: "Fine Leather",
+    name: "fine_leather",
+    description: "materials_description",
+    ingredients: [
+      {
+        name: "plant_fiber",
+        raw: 16,
+        quantity: 16,
+      },
+      {
+        name: "fine_pelt",
+        raw: 4,
+        quantity: 4,
+      },
+      {
+        name: "monster_blood",
+        raw: 4,
+        quantity: 4,
+      },
+      {
+        name: "soft_leather",
         raw: 4,
         quantity: 4,
       },

@@ -389,13 +389,18 @@ function log(...x: any) {
         </v-expansion-panels>
 
         <span class="text-lg">All Items to farm</span>
-        <v-btn
-          class="w-full mt-1"
-          variant="flat"
-          :color="changes ? 'red' : 'green'"
-          @click="generateFarmingMaterialList()"
-          >Generate</v-btn
-        >
+        <div class="grid grid-cols-2 gap-x-3 mt-1">
+          <v-btn
+            class="w-full"
+            variant="flat"
+            :color="changes ? 'red' : 'green'"
+            @click="generateFarmingMaterialList()"
+            >Generate</v-btn
+          >
+          <v-btn class="w-full" variant="flat" @click="clearLists()"
+            >Clear</v-btn
+          >
+        </div>
         <div class="mt-2 mb-1 flex flex-row items-center">
           <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
           <h1 class="uppercase">Materials</h1>

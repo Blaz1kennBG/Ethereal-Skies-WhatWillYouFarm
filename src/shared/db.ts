@@ -1,5 +1,11 @@
 import { cloneDeep } from "lodash-es";
+import { armors } from "./armors";
+import { ingredients } from "./ingredients";
+import { accessories } from "./jewelry";
+import { materials } from "./materials";
 import dataJson from "./test.json";
+import { tools } from "./tools";
+import { weapons } from "./weapons";
 
 export interface Requirements {
   level: number;
@@ -49,9 +55,20 @@ export interface FarmingMaterial {
   item: any;
 }
 
+const fill_database = () => {
+  return {
+    items: [...ingredients(), ...materials()],
+    armor: armors(),
+    weapon: weapons(),
+    accessory: accessories(),
+    tool: tools(),
+    fillables: ["armor", "weapon", "tool", "accessory"],
+  };
+};
+
 export const database = {
   getAllItems() {
-    const root = cloneDeep(dataJson);
+    const root = fill_database();
     root.fillables.forEach((category: any) => {
       root[category as keyof typeof root].forEach((categoryItem: any) => {
         categoryItem.materials.forEach((material: any, materialIndex: any) => {
@@ -122,7 +139,8 @@ function recursiveMaterialSet(
     const newObj = {};
     if (!Array.isArray(matching?.ingredients)) {
       try {
-        matching.ingredients = [matching.ingredients];
+        if (matching) matching.ingredients = [matching.ingredients];
+        else throw new Error("No matching ingredients");
       } catch (e) {
         console.error(
           `ERROR. Possibilities: \n 1. Item has materials listed but the the materials' ingredients are missing.`

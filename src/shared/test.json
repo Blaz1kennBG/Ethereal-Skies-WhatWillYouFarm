@@ -422,6 +422,438 @@
     {
       "icon": "ph:sword-light",
       "type": "weapon",
+      "viewValue": "Morganite Sword",
+      "name": "morganite_sword",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Claw",
+      "name": "morganite_claw",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Dagger",
+      "name": "morganite_dagger",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Tanto",
+      "name": "morganite_tanto",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Halberd",
+      "name": "morganite_halberd",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Hammer",
+      "name": "morganite_hammer",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Spear",
+      "name": "morganite_spear",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Grimoire",
+      "name": "morganite_grimoire",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Staff",
+      "name": "morganite_staff",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Holystaff",
+      "name": "morganite_holystaff",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Greatsword",
+      "name": "morganite_greatsword",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Battleaxe",
+      "name": "morganite_battleaxe",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Scythe",
+      "name": "morganite_scythe",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Warhammer",
+      "name": "morganite_warhammer",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 16,
+          "quantity": 16
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Morganite Shield",
+      "name": "morganite_shield",
+      "requirements": {
+        "level": 40,
+        "coins": 375
+      },
+      "materials": [
+        {
+          "name": "coarse_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_morganite",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 18,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
+      "viewValue": "Carnelian Shield",
+      "name": "carnelian_shield",
+      "requirements": {
+        "level": 20,
+        "coins": 125
+      },
+      "materials": [
+        {
+          "name": "moldy_plank",
+          "raw": 8,
+          "quantity": 8
+        },
+        {
+          "name": "refined_carnelian",
+          "raw": 12,
+          "quantity": 12
+        },
+        {
+          "name": "magic_crystal",
+          "raw": 12,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "icon": "ph:sword-light",
+      "type": "weapon",
       "viewValue": "Carnelian Greatsword",
       "name": "carnelian_greatsword",
       "requirements": {
@@ -1224,6 +1656,30 @@
     {
       "craftable_amount": null,
       "type": "ingredients",
+      "viewValue": "Smooth Log",
+      "description": "ingredients_description",
+      "name": "smooth_log",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Hard Log",
+      "description": "ingredients_description",
+      "name": "hard_log",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
+      "viewValue": "Coarse Log",
+      "description": "ingredients_description",
+      "name": "coarse_log",
+      "ingredients": []
+    },
+    {
+      "craftable_amount": null,
+      "type": "ingredients",
       "viewValue": "Raw Ruby",
       "description": "ingredients_description",
       "name": "raw_ruby",
@@ -1397,6 +1853,35 @@
       "name": "moldy_log",
       "description": "Ingredient Description",
       "ingredients": []
+    },
+    {
+      "craftable_amount": 6,
+      "type": "materials",
+      "viewValue": "Coarse Plank",
+      "name": "coarse_plank",
+      "description": "materials_description",
+      "ingredients": [
+        {
+          "name": "sturdy_stick",
+          "quantity": 8,
+          "raw": 8
+        },
+        {
+          "name": "coarse_log",
+          "quantity": 16,
+          "raw": 16
+        },
+        {
+          "name": "ancient_roots",
+          "quantity": 8,
+          "raw": 8
+        },
+        {
+          "name": "moldy_plank",
+          "quantity": 4,
+          "raw": 4
+        }
+      ]
     },
     {
       "craftable_amount": 6,

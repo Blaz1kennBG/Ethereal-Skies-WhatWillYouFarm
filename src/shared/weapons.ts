@@ -1241,5 +1241,6 @@ export const weapons = () => {
     }
   });
   // console.log("Ingredients does not have dublicates.");
-  return data;
+
+  return data.sort((a, b) => b.requirements.level - a.requirements.level);
 };

@@ -7,6 +7,11 @@ const totalPoints = ref(0);
 const max_points = 300;
 function addOrRemove(att: any, amount: number, remove = false) {
   if (remove) {
+    if (att.quantity - amount <= 0) {
+      totalPoints.value = 0;
+      att.quantity = 0;
+      return;
+    }
     if (att.quantity > 0) {
       totalPoints.value -= amount;
       att.quantity -= amount;

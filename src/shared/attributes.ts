@@ -1,5 +1,5 @@
 const base_url =
-  process.env.MY_CONFIG === "production"
+  process.env.NODE_ENV === "production"
     ? "/ethereal-skies-wwyf/images/"
     : "src/assets/images/";
 

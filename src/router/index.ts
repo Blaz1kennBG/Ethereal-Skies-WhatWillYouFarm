@@ -30,7 +30,7 @@ const routes: RouterOptions["routes"] = [
 
 const router = createRouter({
   history: createWebHistory(
-    process.env.NODE_ENV === "production" ? "/ethereal-skies-wwyf/" : "/"
+    process.env.MY_CONFIG === "production" ? "/ethereal-skies-wwyf/" : "/"
   ),
   routes,
 });

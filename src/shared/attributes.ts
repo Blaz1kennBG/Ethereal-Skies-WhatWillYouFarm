@@ -1,5 +1,5 @@
 const base_url =
-  process.env.NODE_ENV === "production"
+  process.env.MY_CONFIG === "production"
     ? "/ethereal-skies-wwyf/images/"
     : "src/assets/images/";
 
@@ -93,7 +93,7 @@ export const attributes = [
     stats: [
       {
         viewValue: "Max Mana",
-        multiplier: 0.1,
+        multiplier: 0.2,
       },
       {
         viewValue: "Bonus Experience",
@@ -101,7 +101,7 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-— 0.1% Max Mana
+— 0.2% Max Mana
 — 0.1% Bonus Experience`,
   },
 ];

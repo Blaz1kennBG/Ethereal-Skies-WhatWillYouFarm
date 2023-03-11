@@ -4,9 +4,8 @@ import { cloneDeep } from "lodash";
 import { ref } from "vue";
 const attributes = ref(cloneDeep(_attributes));
 const totalPoints = ref(0);
-const max = 300;
+const max_points = 300;
 function addOrRemove(att: any, amount: number, remove = false) {
-  console.log(remove, att.quantity);
   if (remove) {
     if (att.quantity > 0) {
       totalPoints.value -= amount;
@@ -14,8 +13,14 @@ function addOrRemove(att: any, amount: number, remove = false) {
     }
     return;
   }
-  totalPoints.value += amount;
-  att.quantity += amount;
+  if (att.quantity + amount > max_points) {
+    const difference = max_points - att.quantity;
+    totalPoints.value += difference;
+    att.quantity += difference;
+  } else {
+    totalPoints.value += amount;
+    att.quantity += amount;
+  }
 }
 function reset() {
   attributes.value = cloneDeep(_attributes);
@@ -35,11 +40,11 @@ function reset() {
           </div>
 
           <h1 class="text-center text-lg my-2">
-            Points: {{ totalPoints }} / {{ max }}
+            Points: {{ totalPoints }} / {{ max_points }}
           </h1>
-          <div class="grid grid-cols-6 gap-y-5 gap-x-1 place-items-center">
+          <div class="grid grid-cols-6 gap-y-5 gap-x-10 place-items-center">
             <div
-              class="flex flex-col gap-y-3 justify-center items-center"
+              class="flex flex-col gap-y-3 justify-center items-center !border !border-neutral-600 rounded-lg p-5"
               :class="{ 'col-span-2': index < 3, 'col-span-3': index >= 3 }"
               v-for="(att, index) of attributes"
               :key="att.name"
@@ -47,7 +52,7 @@ function reset() {
               <button class="transition-all duration-300 hover:scale-110">
                 <img :src="att.iconUrl" />
               </button>
-              <div class="flex flex-row gap-x-2 justify-center">
+              <div class="grid grid-cols-3 gap-3 justify-center">
                 <v-btn
                   size="x-small"
                   class="!text-xs flex"
@@ -60,8 +65,44 @@ function reset() {
                   size="x-small"
                   class="!text-xs flex"
                   icon
+                  @click="() => addOrRemove(att, 10)"
+                >
+                  +10
+                </v-btn>
+                <v-btn
+                  size="x-small"
+                  class="!text-xs flex"
+                  icon
+                  @click="() => addOrRemove(att, 50)"
+                >
+                  +50
+                </v-btn>
+                <div
+                  class="w-full h-[1px] col-span-3 bg-neutral-600 rounded-lg"
+                ></div>
+                <v-btn
+                  size="x-small"
+                  class="!text-xs flex"
+                  icon
                   @click="() => addOrRemove(att, 1, true)"
-                  >-1
+                >
+                  -1
+                </v-btn>
+                <v-btn
+                  size="x-small"
+                  class="!text-xs flex"
+                  icon
+                  @click="() => addOrRemove(att, 10, true)"
+                >
+                  -10
+                </v-btn>
+                <v-btn
+                  size="x-small"
+                  class="!text-xs flex"
+                  icon
+                  @click="() => addOrRemove(att, 50, true)"
+                >
+                  -50
                 </v-btn>
               </div>
             </div>

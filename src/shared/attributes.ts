@@ -1,5 +1,7 @@
 const base_url =
-  process.env.NODE_ENV === "production" ? "/images/" : "src/assets/imaes";
+  process.env.NODE_ENV === "production"
+    ? "/ethereal-skies-wwyf/assets/images/"
+    : "src/assets/imaes";
 
 export const attributes = [
   {

@@ -1,6 +1,9 @@
+const base_url =
+  process.env.NODE_ENV === "production" ? "/images/" : "src/assets/imaes";
+
 export const attributes = [
   {
-    iconUrl: "./assets/images/strength.png",
+    iconUrl: base_url + "strength.png",
     name: "strength",
     viewValue: "Strength",
     max: 300,
@@ -20,7 +23,7 @@ export const attributes = [
 — 0.1% Critical Strike Power`,
   },
   {
-    iconUrl: "./assets/images/endurance.png",
+    iconUrl: base_url + "endurance.png",
     name: "endurance",
     viewValue: "Endurance",
     max: 300,
@@ -40,7 +43,7 @@ export const attributes = [
 — 0.2% Max Health`,
   },
   {
-    iconUrl: "./assets/images/dexterity.png",
+    iconUrl: base_url + "dexterity.png",
     name: "dexterity",
     viewValue: "Dexterity",
     max: 300,
@@ -60,7 +63,7 @@ export const attributes = [
 — 0.1% Critical Strike Change`,
   },
   {
-    iconUrl: "./assets/images/intelligence.png",
+    iconUrl: base_url + "intelligence.png",
     name: "intelligence",
     viewValue: "Intelligence",
     max: 300,
@@ -80,7 +83,7 @@ export const attributes = [
 — 0.1% Cooldown Reduction`,
   },
   {
-    iconUrl: "./assets/images/wisdom.png",
+    iconUrl: base_url + "wisdom.png",
     name: "wisdom",
     viewValue: "Wisdom",
     max: 300,

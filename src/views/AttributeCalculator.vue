@@ -49,9 +49,21 @@ function reset() {
               v-for="(att, index) of attributes"
               :key="att.name"
             >
-              <button class="transition-all duration-300 hover:scale-110">
-                <img :src="att.iconUrl" />
-              </button>
+              <v-tooltip
+                :text="att.description"
+                location="top"
+                content-class="!bg-neutral-300 !whitespace-pre"
+              >
+                <template v-slot:activator="{ props }">
+                  <button
+                    class="transition-all duration-300 hover:scale-110"
+                    v-bind="props"
+                  >
+                    <img :src="att.iconUrl" />
+                  </button>
+                </template>
+              </v-tooltip>
+
               <div class="grid grid-cols-3 gap-3 justify-center">
                 <v-btn
                   size="x-small"

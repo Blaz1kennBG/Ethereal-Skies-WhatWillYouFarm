@@ -16,9 +16,8 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-        0.2% Attack Damage
-        0.1% Critical Strike Power
-    `,
+— 0.2% Attack Damage
+— 0.1% Critical Strike Power`,
   },
   {
     iconUrl: "src/assets/images/endurance.png",
@@ -37,9 +36,8 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-            0.1% Defense
-            0.2% Max Health
-        `,
+— 0.1% Defense
+— 0.2% Max Health`,
   },
   {
     iconUrl: "src/assets/images/dexterity.png",
@@ -58,9 +56,8 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-            0.1% Skill Critical Strike Chance
-            0.1% Critical Strike Change
-        `,
+— 0.1% Skill Critical Strike Chance
+— 0.1% Critical Strike Change`,
   },
   {
     iconUrl: "src/assets/images/intelligence.png",
@@ -79,9 +76,8 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-            0.1% Skill Damage
-            0.1% Cooldown Reduction
-        `,
+— 0.1% Skill Damage
+— 0.1% Cooldown Reduction`,
   },
   {
     iconUrl: "src/assets/images/wisdom.png",
@@ -100,8 +96,7 @@ export const attributes = [
       },
     ],
     description: `Per point bonus: 
-            0.1% Max Mana
-            0.1% Bonus Experience
-        `,
+— 0.1% Max Mana
+— 0.1% Bonus Experience`,
   },
 ];

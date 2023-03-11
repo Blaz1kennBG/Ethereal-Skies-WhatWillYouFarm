@@ -6,7 +6,24 @@
       permanent
       class="!bg-tw-primary"
     >
-      <v-list density="compact" nav class="flex flex-col justify-center h-full">
+      <div>
+        <img
+          src="https://cdn.craftingstore.net/rPPmDHlLQ1/06219fa8c6ef2a34927d3de3b00458a9/hx7j0zxo07swyexedkbh.png"
+        />
+      </div>
+      <v-list-item title="play.etherealskies.com">
+        <template v-slot:prepend>
+          <i class="mr-2">
+            <span
+              class="iconify scale-125"
+              data-width="24"
+              data-height="24"
+              data-icon="ph:game-controller"
+            ></span>
+          </i>
+        </template>
+      </v-list-item>
+      <v-list density="compact" nav class="flex flex-col justify-center">
         <v-list-item
           title="The Forge"
           value="the-forge"

@@ -238,12 +238,12 @@ function log(...x: any) {
 </style>
 <template>
   <v-container
-    class="h-screen overflow-hidden transition-all duration-500"
+    class="h-screen overflow-hidden transition-all duration-500 !p-3 border border-neutral-100"
     :class="{ '!max-w-[100vw]': !compact }"
   >
     <Header @onCompact="() => (compact = !compact)" />
     <v-row>
-      <v-col md="12" class="bg-neutral-900">
+      <v-col md="12" class="!bg-tw-secondary border border-neutral-100">
         <v-form
           v-model="validForm"
           @submit.prevent="submit"
@@ -264,14 +264,14 @@ function log(...x: any) {
     <v-row class="h-full">
       <v-col
         md="4"
-        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
+        class="!bg-tw-secondary border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
         >Farming list
         <v-list
-          class="!my-2 !p-0"
+          class="!my-2 !p-0 !bg-tw-primary"
           v-for="farmingItem in farmingList"
           :key="farmingItem.item.name"
         >
-          <v-list-group>
+          <v-list-group class="!bg-tw-primary">
             <template v-slot:activator="{ props, isOpen }">
               <list-group-activator
                 :delete-action="true"
@@ -305,7 +305,7 @@ function log(...x: any) {
               <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
             </div>
             <template v-for="(material, i) in farmingItem.materials" :key="i">
-              <v-card>
+              <v-card class="!bg-tw-primary">
                 <div class="flex flex-row items-center">
                   <v-checkbox-btn
                     :label="`${material.viewValue} (${material.quantity})`"
@@ -323,7 +323,7 @@ function log(...x: any) {
               v-for="(ingredient, i) in farmingItem.ingredients"
               :key="i"
             >
-              <v-card>
+              <v-card class="!bg-tw-primary">
                 <div class="flex flex-row items-center">
                   <v-checkbox-btn
                     :label="`${ingredient.viewValue} (${ingredient.quantity})`"
@@ -337,7 +337,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
+        class="!bg-tw-secondary border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
         Item list
         <v-card
@@ -359,7 +359,7 @@ function log(...x: any) {
       </v-col>
       <v-col
         md="4"
-        class="bg-[#0D1117] border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
+        class="!bg-tw-secondary border border-solid border-neutral-100 overflow-auto !pb-28 h-[90%]"
       >
         <v-expansion-panels class="mb-5">
           <v-expansion-panel>
@@ -407,6 +407,7 @@ function log(...x: any) {
           <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
         </div>
         <v-card
+          class="!bg-tw-primary"
           v-for="material in materialFarmingList.filter(
             (v) => v.item.type === 'materials'
           )"
@@ -425,6 +426,7 @@ function log(...x: any) {
           <div class="bg-red-100 h-[2px] flex-1 mx-2"></div>
         </div>
         <v-card
+          class="!bg-tw-primary"
           v-for="material in materialFarmingList.filter(
             (v) => v.item.type === 'ingredients'
           )"

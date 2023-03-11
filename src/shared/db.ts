@@ -97,7 +97,7 @@ export const database = {
       .filter(
         (v) => typeof v === "object" && database_raw.fillables.includes(v.type)
       );
-    console.log(_new);
+
     return _new as CraftingItem[];
   },
 };

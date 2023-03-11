@@ -1,6 +1,6 @@
 export const attributes = [
   {
-    iconUrl: "assets/images/strength.png",
+    iconUrl: "./assets/images/strength.png",
     name: "strength",
     viewValue: "Strength",
     max: 300,
@@ -20,7 +20,7 @@ export const attributes = [
 — 0.1% Critical Strike Power`,
   },
   {
-    iconUrl: "assets/images/endurance.png",
+    iconUrl: "./assets/images/endurance.png",
     name: "endurance",
     viewValue: "Endurance",
     max: 300,
@@ -40,7 +40,7 @@ export const attributes = [
 — 0.2% Max Health`,
   },
   {
-    iconUrl: "assets/images/dexterity.png",
+    iconUrl: "./assets/images/dexterity.png",
     name: "dexterity",
     viewValue: "Dexterity",
     max: 300,
@@ -60,7 +60,7 @@ export const attributes = [
 — 0.1% Critical Strike Change`,
   },
   {
-    iconUrl: "assets/images/intelligence.png",
+    iconUrl: "./assets/images/intelligence.png",
     name: "intelligence",
     viewValue: "Intelligence",
     max: 300,
@@ -80,7 +80,7 @@ export const attributes = [
 — 0.1% Cooldown Reduction`,
   },
   {
-    iconUrl: "assets/images/wisdom.png",
+    iconUrl: "./assets/images/wisdom.png",
     name: "wisdom",
     viewValue: "Wisdom",
     max: 300,
